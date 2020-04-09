@@ -36,10 +36,11 @@
 <script>
 	// example from https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
 
+	var video = document.querySelector("#videoElement");
+	
 	var startVideo = document.querySelector("#start");
     startVideo.addEventListener("click", start, false);
 	function start(e) {
-	var video = document.querySelector("#videoElement");
 
 if (navigator.mediaDevices.getUserMedia) {
   navigator.mediaDevices.getUserMedia({ video: true })
