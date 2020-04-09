@@ -21,7 +21,7 @@
 	<BR />
 	This is a placeholder page for the ACS #flattenthecurvehack challenge<BR />
 	<BR />
-	<button onClick="oauthSignIn">Test Google Auth</button><BR />
+	<button onClick="oauthSignIn()">Test Google Auth</button><BR />
 	
 	<script>
 // Google OAuth2.0
