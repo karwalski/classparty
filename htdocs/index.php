@@ -24,18 +24,22 @@
 	<button onClick="oauthSignIn()">Test Google Auth</button><BR />
 	<DIV id="raw"></DIV>
 	<BR />
-	<strong>VR example from https://github.com/googlearchive/vrview/<strong></BR>
-	 <div id="vrview"></div>
+	<strong>Webcam example<strong></BR>
+
 
 		<div id="container">
 	<video autoplay="true" id="videoElement">
 	
 	</video>
-			<button id="stop">Stop Video</button>
+			<button id="start">Start Video</button><button id="stop">Stop Video</button>
 </div>
 <script>
 	// example from https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
-var video = document.querySelector("#videoElement");
+
+	var startVideo = document.querySelector("#start");
+    startVideo.addEventListener("click", start, false);
+	function start(e) {
+	var video = document.querySelector("#videoElement");
 
 if (navigator.mediaDevices.getUserMedia) {
   navigator.mediaDevices.getUserMedia({ video: true })
@@ -45,9 +49,9 @@ if (navigator.mediaDevices.getUserMedia) {
     .catch(function (err0r) {
       console.log("Something went wrong!");
     });
-}
-	
-	    var stopVideo = document.querySelector("#stop");
+}}
+
+	var stopVideo = document.querySelector("#stop");
     stopVideo.addEventListener("click", stop, false);
 
     function stop(e) {
@@ -62,7 +66,9 @@ if (navigator.mediaDevices.getUserMedia) {
       video.srcObject = null;
     }
 </script>
-		
+
+			<strong>VR example from https://github.com/googlearchive/vrview/<strong></BR>
+	 <div id="vrview"></div>
 		
     <ul class="carousel">
       <li>
