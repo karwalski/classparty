@@ -23,6 +23,45 @@
 	<BR />
 	<button onClick="oauthSignIn()">Test Google Auth</button><BR />
 	<DIV id="raw"></DIV>
+	<BR />
+	<strong>VR example from https://github.com/googlearchive/vrview/<strong></BR>
+	 <div id="vrview"></div>
+
+    <ul class="carousel">
+      <li>
+        <a href="#petra">
+          <img src="petra-thumbnail.jpg">
+          <small>Petra</small>
+        </a>
+      </li>
+      <li>
+        <a href="#christTheRedeemer">
+          <img src="christ-redeemer-thumbnail.jpg">
+          <small>Christ the Redeemer</small>
+        </a>
+      </li>
+      <li>
+        <a href="#machuPicchu">
+          <img src="machu-picchu-thumbnail.jpg">
+          <small>Machu Picchu</small>
+        </a>
+      </li>
+      <li>
+        <a href="#chichenItza">
+          <img src="chichen-itza-thumbnail.jpg">
+          <small>Chichen Itza</small>
+        </a>
+      </li>
+      <li>
+        <a href="#tajMahal">
+          <img src="taj-mahal-thumbnail.jpg">
+          <small>Taj Mahal</small>
+        </a>
+      </li>
+    </ul>
+
+    <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+    <script src="vr.js"></script>
 	
 	<script>
 // Google OAuth2.0
