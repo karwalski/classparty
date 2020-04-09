@@ -68,46 +68,25 @@ if (navigator.mediaDevices.getUserMedia) {
     }
 </script>
 
-			<strong>VR example from https://github.com/googlearchive/vrview/</strong></BR>
+			<strong>VR example from https://developers.google.com/vr/develop/web/vrview-web</strong></BR>
 	 <div id="vrview"></div>
-		
-    <ul class="carousel">
-      <li>
-        <a href="#petra">
-          <img src="petra-thumbnail.jpg">
-          <small>Petra</small>
-        </a>
-      </li>
-      <li>
-        <a href="#christTheRedeemer">
-          <img src="christ-redeemer-thumbnail.jpg">
-          <small>Christ the Redeemer</small>
-        </a>
-      </li>
-      <li>
-        <a href="#machuPicchu">
-          <img src="machu-picchu-thumbnail.jpg">
-          <small>Machu Picchu</small>
-        </a>
-      </li>
-      <li>
-        <a href="#chichenItza">
-          <img src="chichen-itza-thumbnail.jpg">
-          <small>Chichen Itza</small>
-        </a>
-      </li>
-      <li>
-        <a href="#tajMahal">
-          <img src="taj-mahal-thumbnail.jpg">
-          <small>Taj Mahal</small>
-        </a>
-      </li>
-    </ul>
+	
 
     <script src="/vrview.min.js"></script>
-    <script src="/vr.js"></script>
 	
 	<script>
+		
+	window.addEventListener('load', onVrViewLoad);
+
+function onVrViewLoad() {
+  // Selector '#vrview' finds element with id 'vrview'.
+  var vrView = new VRView.Player('#vrview', {
+    image: '/chichen-itza.jpg'
+  });
+}	
+		
+		
+		
 // Google OAuth2.0
 function oauthSignIn() {
   var oauth2Endpoint = 'https://accounts.google.com/o/oauth2/v2/auth';
