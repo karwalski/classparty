@@ -16,6 +16,9 @@
 </head>
 
 <body>
-	Welcome!
+	Welcome!<BR />
+	
+	
+	This is a placeholder page for the ACS #flattenthecurvehack challenge
 </body>
 </html>
