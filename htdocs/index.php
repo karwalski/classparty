@@ -104,7 +104,7 @@ if (navigator.mediaDevices.getUserMedia) {
       </li>
     </ul>
 
-    <script src="/vrview.min.js"></script>
+    <script src="vrview.min.js"></script>
     <script src="vr.js"></script>
 	
 	<script>
