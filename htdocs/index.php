@@ -22,6 +22,7 @@
 	This is a placeholder page for the ACS #flattenthecurvehack challenge<BR />
 	<BR />
 	<button onClick="oauthSignIn()">Test Google Auth</button><BR />
+	<DIV id="raw"></DIV>
 	
 	<script>
 // Google OAuth2.0
@@ -54,6 +55,26 @@ function oauthSignIn() {
   document.body.appendChild(form);
   form.submit();
 }
+		
+		  var xhttp = new XMLHttpRequest();
+			var server = "https://classroom.googleapis.com/v1/";
+			var request = "courses";
+			var params = "?studentId=me&courseStates=ACTIVE";
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+			// Raw output
+			document.getElementById("raw").innerHTML = this.responseText;
+			var response = JSON.parse(this.responseText);
+				
+		    }
+		  }
+		  xhttp.open("GET", server + request + params, true);
+		const urlParams = new URLSearchParams(window.location.search);
+			xhttp.setRequestHeader("Authorization", urlParams.get('token_type') + " " + urlParams.get('access_token'));
+			xhttp.setRequestHeader("Content-Type", "application/json");
+		  xhttp.send();
+					
+		
 	</script>
 </body>
 </html>
