@@ -69,7 +69,7 @@ function oauthSignIn() {
 		    }
 		  }
 		  xhttp.open("GET", server + request + params, true);
-		const urlParams = new URLSearchParams(window.location.search);
+		const urlParams = new URLSearchParams(window.location.hash);
 			xhttp.setRequestHeader("Authorization", urlParams.get('token_type') + " " + urlParams.get('access_token'));
 			xhttp.setRequestHeader("Content-Type", "application/json");
 		  xhttp.send();
