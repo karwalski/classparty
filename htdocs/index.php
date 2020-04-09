@@ -76,7 +76,7 @@ if (navigator.mediaDevices.getUserMedia) {
 	
 	<script>
 		
-	window.addEventListener('load', onVrViewLoad);
+	// window.addEventListener('load', onVrViewLoad);
 
 function onVrViewLoad() {
   // Selector '#vrview' finds element with id 'vrview'.
