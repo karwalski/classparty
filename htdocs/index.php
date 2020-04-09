@@ -37,7 +37,7 @@ function oauthSignIn() {
   var params = {'client_id': '522572922800-m16cu28278v69hud1po3v8kt3f7atfeo.apps.googleusercontent.com',
                 'redirect_uri': 'https://classparty.net/',
                 'response_type': 'token',
-                'scope': 'https://www.googleapis.com/auth/classroom.courses.readonly, https://www.googleapis.com/auth/drive.metadata.readonly',
+                'scope': 'https://www.googleapis.com/auth/classroom.courses.readonly',
                 'include_granted_scopes': 'true',
                 'state': 'pass-through value'};
 
