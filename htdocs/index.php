@@ -97,7 +97,7 @@ if (navigator.mediaDevices.getUserMedia) {
       </li>
     </ul>
 
-    <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+    <script src="/vrview.min.js"></script>
     <script src="vr.js"></script>
 	
 	<script>
