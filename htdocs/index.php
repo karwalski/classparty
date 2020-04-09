@@ -27,6 +27,43 @@
 	<strong>VR example from https://github.com/googlearchive/vrview/<strong></BR>
 	 <div id="vrview"></div>
 
+		<div id="container">
+	<video autoplay="true" id="videoElement">
+	
+	</video>
+			<button id="stop">Stop Video</button>
+</div>
+<script>
+	// example from https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
+var video = document.querySelector("#videoElement");
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+	
+	    var stopVideo = document.querySelector("#stop");
+    stopVideo.addEventListener("click", stop, false);
+
+    function stop(e) {
+      var stream = video.srcObject;
+      var tracks = stream.getTracks();
+
+      for (var i = 0; i < tracks.length; i++) {
+        var track = tracks[i];
+        track.stop();
+      }
+
+      video.srcObject = null;
+    }
+</script>
+		
+		
     <ul class="carousel">
       <li>
         <a href="#petra">
