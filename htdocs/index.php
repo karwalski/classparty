@@ -24,7 +24,7 @@
 	<button onClick="oauthSignIn()">Test Google Auth</button><BR />
 	<DIV id="raw"></DIV>
 	<BR />
-	<strong>Webcam example<strong></BR>
+	<strong>Webcam example</strong></BR>
 
 
 		<div id="container">
@@ -68,7 +68,7 @@ if (navigator.mediaDevices.getUserMedia) {
     }
 </script>
 
-			<strong>VR example from https://github.com/googlearchive/vrview/<strong></BR>
+			<strong>VR example from https://github.com/googlearchive/vrview/</strong></BR>
 	 <div id="vrview"></div>
 		
     <ul class="carousel">
@@ -104,8 +104,8 @@ if (navigator.mediaDevices.getUserMedia) {
       </li>
     </ul>
 
-    <script src="vrview.min.js"></script>
-    <script src="vr.js"></script>
+    <script src="/vrview.min.js"></script>
+    <script src="/vr.js"></script>
 	
 	<script>
 // Google OAuth2.0
