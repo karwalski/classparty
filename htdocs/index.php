@@ -263,7 +263,7 @@ function goToCourse(courseId) {
 	});
 	
 
-var fps = 60;
+var fps = 1;
 function streamAjax() {
 	
         var image =     document.getElementById("overlay").toDataURL("image/png");
