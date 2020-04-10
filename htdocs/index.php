@@ -21,13 +21,16 @@
 <body>
 	
 	<div id="top-menu">
-	<div class="top-menu-links">
+	<div class="top-menu-links" onclick="window.location.href ='meeting.php';">
 		AR Meeting
 	</div>
-	<div class="top-menu-links">
+	<div class="top-menu-links" onclick="window.location.href ='break.php';">
 		Brain Break
 	</div>
-	<div class="top-menu-links">
+	<div class="top-menu-links" onclick="window.location.href ='excursion.php';">
+		Excursions
+	</div>
+	<div class="top-menu-links" onclick="window.location.href ='https://classroom.google.com/';">
 		Google Classrom
 	</div>
 	<div class="top-menu-links" onclick="oauthSignIn()">
