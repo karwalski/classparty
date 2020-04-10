@@ -11,18 +11,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </head>
 <body>
-  <div id="navbar"></div>
+  <div id="navbar" style="display:none;"></div>
   <div class="center-content page-container">
 
-    <div class="progress" id="loader">
-      <div class="indeterminate"></div>
+    <div class="progress" id="loader" style="display:none;">
+      <div class="indeterminate" style="display:none;"></div>
     </div>
     <div style="position: relative" class="margin">
       <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
-      <canvas id="overlay" />
+      <canvas id="overlay"  style="background:color:#ffffff;"/>
     </div>
 
-    <div class="row side-by-side">
+    <div class="row side-by-side" style="display:none;">
 
       <!-- face_detector_selection_control -->
       <div id="face_detector_selection_control" class="row input-field" style="margin-right: 20px;">
@@ -56,7 +56,7 @@
 
 
     <!-- ssd_mobilenetv1_controls -->
-    <span id="ssd_mobilenetv1_controls">
+    <span id="ssd_mobilenetv1_controls" style="display:none;">
       <div class="row side-by-side">
         <div class="row">
           <label for="minConfidence">Min Confidence:</label>
@@ -79,7 +79,7 @@
     <!-- ssd_mobilenetv1_controls -->
 
     <!-- tiny_face_detector_controls -->
-    <span id="tiny_face_detector_controls">
+    <span id="tiny_face_detector_controls" style="display:none;">
       <div class="row side-by-side">
         <div class="row input-field" style="margin-right: 20px;">
           <select id="inputSize">
@@ -175,11 +175,6 @@
 
     function updateResults() {}
 
-    $(document).ready(function() {
-      renderNavBar('#navbar', 'webcam_face_landmark_detection')
-      initFaceDetectionControls()
-      run()
-    })
   </script>
 </body>
 </html>
