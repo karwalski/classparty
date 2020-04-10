@@ -10,7 +10,7 @@
   <meta charset="utf-8">
 
   <title>Classparty</title>
-  <meta name="description" content="Classparty">
+  <meta name="description" content="ClassParty">
   <meta name="author" content="karwalski">
 	<link href="https://fonts.googleapis.com/css?family=Quando&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
@@ -97,6 +97,7 @@
 </div>
 	
 
+    <script src="vrview.min.js"></script>
 <script>
 	// example from https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
 
@@ -130,14 +131,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
       video.srcObject = null;
     }
-</script>
 
-
-	
-
-    <script src="vrview.min.js"></script>
-	
-	<script>
 		
 	window.addEventListener('load', onVrViewLoad);
 
