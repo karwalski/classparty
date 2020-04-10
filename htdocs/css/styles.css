@@ -1,0 +1,113 @@
+/*
+
+
+#FFBA49 - Pastel Orange
+#20A39E - Light Sea Green - darker variant 00716C
+#EF5B5B - Sunset Orange
+#23001E - Middle Red Purple
+#A4A9AD - Dark Medium Gray - lighter variant D6D8D9
+
+*/
+
+		body {
+			font-family: 'Quando', serif;
+      background-color: #D6D8D9;
+      color: #23001E;
+		}
+
+#top-menu {
+ background-color: #D6D8D9;
+      color: #EF5B5B;
+	    position: fixed;
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    text-align: center;
+	font-size:1.5em;
+	top:0;
+}
+
+.top-menu-links {
+ margin-left:100px;
+	margin-right:100px;
+	display:inline-block;
+	margin-top: .75em;
+	cursor: pointer;
+}
+
+#banner {
+ background-color: #FFBA49;
+	height: 14em;
+	
+}
+
+#banner h1 {
+    margin-top: 30px;
+      color: #D6D8D9;
+      font-size: 10em;
+      text-align: center;
+	font-weight: 1;
+}
+
+a:link {
+  color: #20A39E;
+}
+
+a:visited {
+  color: #00716C;
+}
+
+a:hover {
+  color: #00716C;
+}
+
+a:active {
+  color: #00716C;
+}
+
+#sidebar {
+    text-align: center;
+	 width: 10vw;
+	display: inline-block;
+	
+}
+
+.sidebar-lessons {
+	background-color: #20A39E;
+    width: 8vw;
+    height: 5vw;
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
+    display: block;
+    /* line-height: 5vw; */
+	margin-bottom: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+#content {
+	    display: inline-block;
+    margin-left: 12vw;
+    width: 50vw;
+    margin-right: 20vw;
+    vertical-align: top;
+    margin-top: 40px;
+	
+}
+.post {
+    min-height: 15em;	
+    max-height: 30em;
+	overflow: auto;
+    border-color: #EF5B5B;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+	padding: 15px;
+}
+}
+
+.pinned {
+background-color:	#FFBA49;
+}
