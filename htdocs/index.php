@@ -134,16 +134,16 @@ if (navigator.mediaDevices.getUserMedia) {
 
 	
 
-    <script src="/vrview.min.js"></script>
+    <script src="vrview.min.js"></script>
 	
 	<script>
 		
-	// window.addEventListener('load', onVrViewLoad);
+	window.addEventListener('load', onVrViewLoad);
 
 function onVrViewLoad() {
   // Selector '#vrview' finds element with id 'vrview'.
   var vrView = new VRView.Player('#vrview', {
-    image: '/chichen-itza.jpg'
+    image: 'chichen-itza.jpg'
   });
 }	
 		
