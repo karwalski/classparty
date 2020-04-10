@@ -72,7 +72,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       
       var params = new URLSearchParams(document.location.search);
       
-      if(params.get("location")})
+      if(params.get("location"))
       {
         scene.addNode(new SkyboxNode({url: params.get("location")}));
       }
