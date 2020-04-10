@@ -1,108 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VR View - gallery example</title>
+    <title>VR View - video example</title>
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     <link href="../style.css" rel="stylesheet" type="text/css">
-    <style>
-      ul.carousel {
-        display: flex;
-        width: 720px;
-        margin: 20px auto;
-        padding: 0;
-        justify-content: center;
-        overflow: auto;
-      }
-
-      /* MOBILE */
-      @media screen and (max-width: 700px) {
-        ul.carousel {
-          width: 100%;
-          justify-content: flex-start;
-        }
-
-          ul.carousel li:first-child {
-            padding-left: 0;
-          }
-
-          ul.carousel li:last-child {
-            padding-right: 0;
-          }
-      }
-
-        ul.carousel li {
-          list-style: none;
-          margin: 0;
-          padding: 0 10px;
-          display: inline-block;
-        }
-          ul.carousel li a {
-            display: inline-block;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            color: #999;
-            text-decoration: none;
-          }
-            ul.carousel li a.current {
-              color: blue;
-              text-decoration: underline;
-            }
-            ul.carousel li a img {
-              width: 124px;
-              height: 80px;
-            }
-            ul.carousel li a small {
-              display: block;
-            }
-    </style>
   </head>
   <body>
-    <h1>New7Wonders of World</h1>
-    <h2>A 2001 initiative</h2>
-    <p>Started by the Swiss corporation New7Wonders Foundation to choose the New7Wonders of the World, the finalists were announced at the start of 2006, from a selection of 200 existing monuments.</p>
+    <h1>Gorillas</h1>
+    <h2>The great apes from Central Africa</h2>
+    <p>Gorillas are ground-dwelling, predominantly herbivorous apes that inhabit
+    the forests of central Africa.</p>
 
-    <p>Below are five of the seven wonders, as announced in July, 2007.</p>
+    <p>The 360 video below shows gorillas in the Congo rainforest.</p>
 
     <div id="vrview"></div>
 
-    <ul class="carousel">
-      <li>
-        <a href="#petra">
-          <img src="petra-thumbnail.jpg">
-          <small>Petra</small>
-        </a>
-      </li>
-      <li>
-        <a href="#christTheRedeemer">
-          <img src="christ-redeemer-thumbnail.jpg">
-          <small>Christ the Redeemer</small>
-        </a>
-      </li>
-      <li>
-        <a href="#machuPicchu">
-          <img src="machu-picchu-thumbnail.jpg">
-          <small>Machu Picchu</small>
-        </a>
-      </li>
-      <li>
-        <a href="#chichenItza">
-          <img src="chichen-itza-thumbnail.jpg">
-          <small>Chichen Itza</small>
-        </a>
-      </li>
-      <li>
-        <a href="#tajMahal">
-          <img src="taj-mahal-thumbnail.jpg">
-          <small>Taj Mahal</small>
-        </a>
-      </li>
-    </ul>
+    <div id="controls">
+      <div id="toggleplay" class="paused"></div>
+      <div id="time">00:00 | 00:00</div>
+      <input id="volumerange" type="range" min="0" max="100" value="100"/>
+      <div id="togglemute"></div>
+      <div id="togglefullscreen"></div>
+    </div>
 
-    <p>Sources: <a href="https://en.wikipedia.org/wiki/Wonders_of_the_World#New7Wonders_of_World">Wikipedia</a> and <a href="https://www.google.com/streetview/">Google Street View</a>.</p>
+    <p>The eponymous genus Gorilla is divided into two species: the eastern
+    gorillas and the western gorillas, and either four or five subspecies. They
+    are the largest living primates by physical size.</p>
 
-    <script src="vrview.min.js"></script>
+    <p>The DNA of gorillas is highly similar to that of humans, from 95–99%
+    depending on what is counted, and they are the next closest living relatives
+    to humans after the chimpanzees and bonobos.</p>
+
+    <p>Gorillas' natural habitats cover tropical or subtropical forests in
+    Africa.  Although their range covers a small percentage of Africa, gorillas
+    cover a wide range of elevations. The mountain gorilla inhabits the
+    Albertine Rift montane cloud forests of the Virunga Volcanoes, ranging in
+    altitude from 2,200–4,300 metres (7,200–14,100 ft). Lowland gorillas live in
+    dense forests and lowland swamps and marshes as low as sea level, with
+    western lowland gorillas living in Central West African countries and
+    eastern lowland gorillas living in the Democratic Republic of the Congo near
+    its border with Rwanda.</p>
+
+    <p>Source <a href="https://en.wikipedia.org/wiki/Gorilla">Wikipedia</a></p>
+
+    <script src="vrview.js"></script>
     <script src="vr.js"></script>
   </body>
 </html>
