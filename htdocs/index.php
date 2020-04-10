@@ -258,8 +258,7 @@ function goToCourse(courseId) {
 
 	});
 	
-	document.body.addEventListener('click', streamTest, true); 
-	
+
 $(function(){
     $("#banner").click(function () {
         var image =     document.getElementById("overlay").toDataURL("image/png");
@@ -277,6 +276,7 @@ $(function(){
         });
     });
 });
+
 	
 	</script>
 </body>
