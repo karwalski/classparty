@@ -20,7 +20,7 @@
 
 import {RenderView} from '../core/renderer.js';
 import {InputRenderer} from '../nodes/input-renderer.js';
-// import {StatsViewer} from '../nodes/stats-viewer.js';
+import {StatsViewer} from '../nodes/stats-viewer.js';
 import {Node} from '../core/node.js';
 import {vec3, quat} from '../math/gl-matrix.js';
 import {Ray} from '../math/ray.js';
@@ -45,7 +45,7 @@ export class Scene extends Node {
     this._statsStanding = false;
     this._stats = null;
     this._statsEnabled = false;
-    this.enableStats(true); // Ensure the stats are added correctly by default.
+    this.enableStats(false); // Ensure the stats are added correctly by default.
 
     this._inputRenderer = null;
     this._resetInputEndFrame = true;
