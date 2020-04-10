@@ -72,6 +72,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       scene.addNode(solarSystem);
       // Still adding a skybox, but only for the benefit of the inline view.
       
+      var params = new URLSearchParams(document.location.search);
       
             if(params.get("location"))
       {
