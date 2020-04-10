@@ -49,16 +49,9 @@
 			This is a placeholder page for the ACS #flattenthecurvehack challenge
 		</div>
 		<div class="post">
-			<strong>My classes</strong><br>
-			<div id="raw"></div>
-		</div>
-		<div class="post">
-			<strong>My virtual face</strong><br>
-			      
 
-		</div>
 		<div class="post">
-			<strong>VR Example</strong><br>
+			<strong>VR Excursion examples</strong><br>
 Chichen Itza<a href="vr.php?location=chichen-itza.jpg">VR</a> <a href="ar.php?location=chichen-itza.jpg">AR</a><br />
 Christ Redeemer<a href="vr.php?location=christ-redeemer.jpg">VR</a> <a href="ar.php?location=christ-redeemer.jpg">AR</a><br />
 Machu Picchu<a href="vr.php?location=machu-picchu.jpgg">VR</a> <a href="ar.php?location=machu-picchu.jpg">AR</a><br />
