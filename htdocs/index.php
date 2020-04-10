@@ -13,13 +13,8 @@
   <meta name="description" content="Classparty">
   <meta name="author" content="karwalski">
 	<link href="https://fonts.googleapis.com/css?family=Quando&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
 
-	<style>
-		body {
-			font-family: 'Quando', serif;
-
-		}
-	</style>
 </head>
 
 <body>
