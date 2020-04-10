@@ -74,16 +74,18 @@ a:active {
 
 .sidebar-lessons {
 	background-color: #20A39E;
-    width: 8vw;
-    height: 5vw;
+    width: 10vw;
+        min-height: 4vw;
     text-align: center;
-    font-size: 2em;
+    font-size: 1em;
     margin: auto;
     display: block;
     /* line-height: 5vw; */
 	margin-bottom: 10px;
 	cursor: pointer;
 	border-radius: 10px;
+	    overflow: hidden;
+	padding-top: 10px;
 }
 
 #content {
