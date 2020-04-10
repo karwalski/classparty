@@ -122,6 +122,6 @@ z-index: -1000;
 
 .faceoverlay {
 	
-	position: absolute;
+	/* position: absolute; */
 	width: 15vw;
 }
