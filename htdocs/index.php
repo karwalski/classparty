@@ -261,7 +261,7 @@ function goToCourse(courseId) {
 	document.body.addEventListener('click', streamTest, true); 
 	
 	function streamTest() {
-	$.post(“stream.php”, { ID:overlay, imgData: canvas.toDataURL(‘image/jpeg’) }).done( function(streamResponse) {  console.log(streamResponse);  });
+	$.post(“stream.php”, { ID:"overlay", imgData: canvas.toDataURL(‘image/jpeg’) }).done( function(streamResponse) {  console.log(streamResponse);  });
 	
 	}
 	
