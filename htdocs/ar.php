@@ -24,18 +24,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <meta name='apple-mobile-web-app-capable' content='yes'>
     <link rel='stylesheet' href='css/common.css'>
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Immersive AR Session</title>
+    <title>ClassParty AR Excursion</title>
   </head>
   <body>
     <header>
       <details>
-        <summary>Immersive AR Session</summary>
+        <summary>ClassParty AR Excursion</summary>
         <p>
-          This sample demonstrates how to use an 'immersive-ar' XRSession to
-          present a simple WebGL scene to an transparent or passthrough XR
-          device. The logic is largely the same as the corresponding VR sample,
-          with the primary difference being that no background is rendered and
-          the model is scaled down for easier viewing in a real-world space.
+          ClassParty augmented reality demo
           <a class="back" href="./">Back</a>
         </p>
       </details>
@@ -69,7 +65,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       // The solar system is big (citation needed). Scale it down so that users
       // can move around the planets more easily.
       // textCP.scale = [0.1, 0.1, 0.1];
-      textCP.rotation = [1, 1, 0, 1];
+      textCP.rotation = [1, 1, 0, 0];
       
 
       
