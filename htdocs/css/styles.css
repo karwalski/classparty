@@ -15,17 +15,28 @@
       color: #23001E;
 		}
 
+#title {
+ /* background-color: #D6D8D9; */ 
+    display: inline-block;
+    width: 20vw;
+    height: 2.5em;
+    text-align: left;
+	font-size:1.5em;
+	top:0;
+	left:10vw;
+}
+
 #top-menu {
  /* background-color: #D6D8D9; */
-      color: #EF5B5B;
-	    position: fixed;
-    display: block;
-    width: 100%;
+	    
+    display: inline-block;
+    width: 70vw;
     height: 2.5em;
     text-align: center;
 	font-size:1.5em;
 	top:0;
 }
+
 
 .top-menu-links {
  margin-left:50px;
@@ -36,6 +47,7 @@
 }
 
 #banner {
+	position: fixed;
  background-color: #FFBA49;
 	/* height: 14em; */
 	
