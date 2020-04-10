@@ -135,8 +135,7 @@ if (getCookie("access_token")) {
 			var params = "?studentId=me&courseStates=ACTIVE";
 		  xhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
-			// Raw output
-			document.getElementById("raw").innerHTML = this.responseText;
+
 			var response = JSON.parse(this.responseText);
 			    
 			    	// '<div class="sidebar-lessons">History</div>'
