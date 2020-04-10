@@ -78,6 +78,7 @@ a:active {
     margin: auto;
     display: block;
     /* line-height: 5vw; */
+	margin-bottom: 10px;
 	
 }
 
@@ -86,5 +87,7 @@ a:active {
     margin-left: 12vw;
     width: 50vw;
     margin-right: 20vw;
+    vertical-align: top;
+    margin-top: 40px;
 	
 }
