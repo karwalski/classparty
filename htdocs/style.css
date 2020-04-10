@@ -1,0 +1,47 @@
+/*
+
+
+#FFBA49 - Pastel Orange
+#20A39E - Light Sea Green
+#EF5B5B - Sunset Orange
+#23001E - Middle Red Purple
+#A4A9AD - Dark Medium Gray
+
+*/
+
+		body {
+			font-family: 'Quando', serif;
+      background-color: #A4A9AD;
+      color: #23001E;
+		}
+
+#top-menu {
+ background-color: #A4A9AD;
+      color: #EF5B5B;
+}
+
+#banner {
+ background-color: #FFBA49;
+}
+
+#banner h1 {
+      color: #A4A9AD;
+      font-size: 10em;
+      text-align: center;
+}
+
+a:link {
+  color: #20A39E;
+}
+
+a:visited {
+  color: #00716C;
+}
+
+a:hover {
+  color: #00716C;
+}
+
+a:active {
+  color: #00716C;
+}
