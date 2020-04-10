@@ -260,10 +260,23 @@ function goToCourse(courseId) {
 	
 	document.body.addEventListener('click', streamTest, true); 
 	
-	function streamTest() {
-	$.post(“stream.php”, { ID:"overlay", imgData: canvas.toDataURL(‘image/jpeg’) }).done( function(streamResponse) {  console.log(streamResponse);  });
-	
-	}
+$(function(){
+    $("#banner").click(function () {
+        var image =     document.getElementById("overlay").toDataURL("image/png");
+        image = image.replace('data:image/png;base64,', '');
+        $.ajax({
+            type: 'POST',
+            url: '/stream.php',
+            data: '{ "imageData" : "' + image + '" }',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (msg) {
+                alert('Image saved successfully !');
+		    console.log(msg);
+            }
+        });
+    });
+});
 	
 	</script>
 </body>
