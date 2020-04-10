@@ -69,7 +69,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       // The solar system is big (citation needed). Scale it down so that users
       // can move around the planets more easily.
       textCP.scale = [0.1, 0.1, 0.1];
-      textCP.translate = [100, 100, 100];
+      // textCP.translate = [100, 100, 100];
+      
+      textCP.matrix = new Float32Array([
+      0.1, 0, 0, 0,
+      0, 0.1, 0, 0,
+      0, 0, 0.1, 0,
+      -0.3625, 0.3625, 0.02, 1,
+    ]);
       
 
       
