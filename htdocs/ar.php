@@ -71,7 +71,18 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       solarSystem.scale = [0.1, 0.1, 0.1];
       scene.addNode(solarSystem);
       // Still adding a skybox, but only for the benefit of the inline view.
-      let skybox = new SkyboxNode({url: 'chichen-itza.jpg'});
+      
+      
+            if(params.get("location")})
+      {
+        let skybox = new SkyboxNode({url: params.get("location")});
+      }
+      else
+      {
+        let skybox = new SkyboxNode({url: 'chichen-itza.jpg'});
+      }
+      
+      
       scene.addNode(skybox);
 
       function initXR() {
