@@ -10,7 +10,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </head>
 <body>
+  <div class="center-content page-container">
 
+    <div class="progress" id="loader">
+      <div class="indeterminate"></div>
+    </div>
       <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
       <canvas id="overlay" style="background-color: white;"/>
  
