@@ -25,15 +25,33 @@
 </head>
 
 <body>
-	<?PHP readfile('top-menu.html'); ?>
+  
+	<div class="top-menu-links" onclick="window.location.href ='/';">
+		Home
+	</div>
 
+</div>
 <p>
 	<br>
 </p>
 <div id="banner">
-	<h1>
-		ClassParty
-	</h1>
+	<div id="title">
+		<h1>ClassParty</h1>
+	</div>
+	<div id="top-menu">
+		<div class="top-menu-links" onclick="window.location.href ='break.php';">
+			Brain Break
+		</div>
+		<div class="top-menu-links" onclick="window.location.href ='ar.php?location=chichen-itza.jpg';">
+			Excursions
+		</div>
+		<div class="top-menu-links" onclick="window.location.href ='https://classroom.google.com/';">
+			Google Classrom
+		</div>
+		<div class="top-menu-links" id="signin" onclick="oauthSignIn()">
+			Sign In
+		</div>
+	</div>
 </div>
 <div id="sidebar">
 
