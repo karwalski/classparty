@@ -106,7 +106,35 @@ function oauthSignIn() {
 	
 const urlParams = new URLSearchParams(window.location.hash);
 	
-if (urlParams.get('token_type') != null) {	
+if (urlParams.get('token_type') != null) {
+	
+	  var d = new Date();
+  d.setTime(d.getTime() + ( urlParams.get('expires_in')*1000));
+  var expires = "expires="+ d.toUTCString();
+	
+	document.cookie = "token_type=" + urlParams.get('token_type') + ";" + expires + ";path=/";
+	document.cookie = "access_token=" + urlParams.get('access_token') + ";" + expires + ";path=/";
+	
+}
+	
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return false;
+}
+
+	
+if (getCookie("access_token")) {	
+	
 		  var xhttp = new XMLHttpRequest();
 			var server = "https://classroom.googleapis.com/v1/";
 			var request = "courses";
@@ -149,7 +177,7 @@ if (urlParams.get('token_type') != null) {
 		  }
 		  xhttp.open("GET", server + request + params, true);
 		
-			xhttp.setRequestHeader("Authorization", urlParams.get('token_type') + " " + urlParams.get('access_token'));
+			xhttp.setRequestHeader("Authorization", getCookie('token_type') + " " + getCookie('access_token'));
 			xhttp.setRequestHeader("Content-Type", "application/json");
 		  xhttp.send();
 					
@@ -182,7 +210,7 @@ function goToCourse(courseId) {
 		  }
 		  xhttp.open("GET", server + request + params, true);
 		
-			xhttp.setRequestHeader("Authorization", urlParams.get('token_type') + " " + urlParams.get('access_token'));
+			xhttp.setRequestHeader("Authorization", getCookie('token_type') + " " + getCookie('access_token'));
 			xhttp.setRequestHeader("Content-Type", "application/json");
 		  xhttp.send();
 }
