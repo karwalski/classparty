@@ -111,3 +111,15 @@ a:active {
 .pinned {
 background-color:	#FFBA49;
 }
+
+.webcam {
+z-index: -1000;
+    position: absolute;
+    width: 20vw;
+}
+
+.faceoverlay {
+	background-color:#ffffff;
+	position: absolute;
+	width: 20vw;
+}
