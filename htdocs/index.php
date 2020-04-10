@@ -32,7 +32,7 @@
 </p>
 <div id="banner">
 	<video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
-      <canvas id="overlay" class="faceoverlay"/>
+	<canvas id="overlay" class="faceoverlay"></canvas>
 	<h1>
 		ClassParty
 	</h1>
