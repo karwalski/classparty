@@ -15,6 +15,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Quando&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="icon" type="image/png" href="favicon.png">
+	
+<script src="/js/face-api/face-api.js"></script>
+  <script src="/js/face-api/faceDetectionControls.js"></script>
+  <script src="/js/face-api/commons.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 </head>
 
@@ -71,10 +77,10 @@
 			<div id="raw"></div>
 		</div>
 		<div class="post">
-			<strong>My webcam</strong><br>
-			<div id="container">
-				<video autoplay="true" id="videoElement"></video> <button id="start">Start Video</button><button id="stop">Stop Video</button>
-			</div>
+			<strong>My faceoutline only</strong><br>
+			      <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
+      <canvas id="overlay"  style="background-color:#ffffff;"/>
+
 		</div>
 		<div class="post">
 			<strong>VR Example</strong><br>
@@ -177,6 +183,71 @@ function oauthSignIn() {
 		  xhttp.send();
 					
 		
+	// Face landmark webcam script
+	
+	    let forwardTimes = []
+    let withBoxes = false
+
+    function onChangeHideBoundingBoxes(e) {
+      withBoxes = !$(e.target).prop('checked')
+    }
+
+    function updateTimeStats(timeInMs) {
+      forwardTimes = [timeInMs].concat(forwardTimes).slice(0, 30)
+      const avgTimeInMs = forwardTimes.reduce((total, t) => total + t) / forwardTimes.length
+      $('#time').val(`${Math.round(avgTimeInMs)} ms`)
+      $('#fps').val(`${faceapi.utils.round(1000 / avgTimeInMs)}`)
+    }
+
+    async function onPlay() {
+      const videoEl = $('#inputVideo').get(0)
+
+      if(videoEl.paused || videoEl.ended || !isFaceDetectionModelLoaded())
+        return setTimeout(() => onPlay())
+
+
+      const options = getFaceDetectorOptions()
+
+      const ts = Date.now()
+
+      const result = await faceapi.detectSingleFace(videoEl, options).withFaceLandmarks()
+
+      updateTimeStats(Date.now() - ts)
+
+      if (result) {
+        const canvas = $('#overlay').get(0)
+        const dims = faceapi.matchDimensions(canvas, videoEl, true)
+        const resizedResult = faceapi.resizeResults(result, dims)
+
+        if (withBoxes) {
+          faceapi.draw.drawDetections(canvas, resizedResult)
+        }
+        faceapi.draw.drawFaceLandmarks(canvas, resizedResult)
+      }
+
+      setTimeout(() => onPlay())
+    }
+
+    async function run() {
+      // load face detection and face landmark models
+      await changeFaceDetector(TINY_FACE_DETECTOR)
+      await faceapi.loadFaceLandmarkModel('/')
+      changeInputSize(224)
+
+      // try to access users webcam and stream the images
+      // to the video element
+      const stream = await navigator.mediaDevices.getUserMedia({ video: {} })
+      const videoEl = $('#inputVideo').get(0)
+      videoEl.srcObject = stream
+    }
+
+    function updateResults() {}
+
+        $(document).ready(function() {
+      initFaceDetectionControls()
+      run()
+    })
+	
 	</script>
 </body>
 </html>
