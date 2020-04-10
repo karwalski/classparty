@@ -50,7 +50,7 @@
 		</div>
 		<div class="post">
 			Teacher stream<BR />
-			<canvas id="teacher"></canvas>
+			<canvas id="teacher" width="640" height="480"></canvas>
 		</div>
 
 		<div class="post">
@@ -275,8 +275,9 @@ function streamAjax() {
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function (data) {
-                    // $('#hidden').val(data);// first set the value    
-		    
+                    // $('#hidden').val(data);// first set the value  
+		    console.log(data);
+		    image.src = "data:image/png;base64," + data;
             },
             complete: function (data) {
                     // Schedule the next
