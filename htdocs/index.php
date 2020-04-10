@@ -25,15 +25,6 @@
 </head>
 
 <body>
-  
-	<div class="top-menu-links" onclick="window.location.href ='/';">
-		Home
-	</div>
-
-</div>
-<p>
-	<br>
-</p>
 <div id="banner">
 	<div id="title">
 		<h1>ClassParty</h1>
