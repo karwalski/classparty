@@ -275,16 +275,12 @@ function streamAjax() {
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function (response) {
-		    
-		    console.log("data:image/png;base64," + response);
-		    	var canvas = document.getElementById("teacher");
-			var ctx = canvas.getContext("2d");
-			var image = new Image();
-		    image.src = "data:image/png;base64," + response;
-		    // ctx.clearRect(0,0,640,480);
-		    ctx.drawImage(image, 0, 0);
+		    console.log("sanity success");
+		    drawTeacher(response);
+
             },
             complete: function (response) {
+		    console.log("sanity complete");
                     // Schedule the next
                     setTimeout(streamAjax, 1000 / fps);
             }
@@ -293,6 +289,15 @@ function streamAjax() {
 setTimeout(streamAjax, 1000 / fps);
 	
 	
+	function drawTeacher(response) {
+			    console.log("data:image/png;base64," + response);
+		    	var canvas = document.getElementById("teacher");
+			var ctx = canvas.getContext("2d");
+			var image = new Image();
+		    image.src = "data:image/png;base64," + response;
+		    // ctx.clearRect(0,0,640,480);
+		    ctx.drawImage(image, 0, 0);
+	}
 	
 	</script>
 </body>
