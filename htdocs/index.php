@@ -26,11 +26,11 @@
 
 <body>
 <div id="banner">
-	<div id="title">
+	<div id="title"  onclick="window.location.href ='/';">
 		<h1>ClassParty</h1>
 	</div>
 	<div id="top-menu">
-		<div class="top-menu-links" onclick="window.location.href ='break.php';">
+		<div class="top-menu-links" onclick="window.location.href ='ar.php?location=petra.jpg;">
 			Brain Break
 		</div>
 		<div class="top-menu-links" onclick="window.location.href ='ar.php?location=chichen-itza.jpg';">
