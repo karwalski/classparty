@@ -31,6 +31,8 @@
 	<br>
 </p>
 <div id="banner">
+	<video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
+      <canvas id="overlay" class="faceoverlay"/>
 	<h1>
 		ClassParty
 	</h1>
@@ -52,8 +54,7 @@
 		</div>
 		<div class="post">
 			<strong>My virtual face</strong><br>
-			      <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
-      <canvas id="overlay" class="faceoverlay"/>
+			      
 
 		</div>
 		<div class="post">
@@ -171,9 +172,9 @@ function goToCourse(courseId) {
 			var response = JSON.parse(this.responseText);
 			    document.getElementById("feed").innerHTML = "";
 			    	// </div>
-			    for (var i = 0; i < response.coursework.length; i++)
+			    for (var i = 0; i < response.courseWork.length; i++)
 			    {
-				document.getElementById("feed").innerHTML += '<div class="post" onClick="goToCourseWork(' + response.coursework[i].id + ')">' + response.coursework[i].title + '</div>'; 
+				document.getElementById("feed").innerHTML += '<div class="post" onClick="goToCourseWork(' + response.courseWork[i].id + ')">' + response.courseWork[i].title + '</div>'; 
 			    }	
 	
 	
