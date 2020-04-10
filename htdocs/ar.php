@@ -68,11 +68,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       // can move around the planets more easily.
       // textCP.scale = [0.1, 0.1, 0.1];
       // textCP.rotation = [0, 1, 0, 0];
-      textCP.translation =  [
-        [0, 0, -1, 0],
-        [0, 1, 0, 0],
-        [1, 0, 0, 0],
-        [0, 0, 0, 1]];
+      textCP.translation =  vec3.fromValues(
+              1,
+              1,
+              0.5
+              );
 
       
 
