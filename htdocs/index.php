@@ -276,7 +276,7 @@ function streamAjax() {
             dataType: 'json',
             complete: function (response) {
 		    console.log("sanity success");
-		    drawTeacher(response);
+		    drawTeacher(string(response));
                     setTimeout(streamAjax, 1000 / fps);
             }
     });
