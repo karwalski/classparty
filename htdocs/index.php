@@ -64,11 +64,11 @@
 			<button id="start">Start Video</button><button id="stop">Stop Video</button>
 </div>
 		</div>
-		</div>
 	<div id="post">
 				<strong>VR Example</strong></BR>
 	 <div id="vrview"></div>
-	</div>
+		</div>
+
 	</div>
 	
 	
