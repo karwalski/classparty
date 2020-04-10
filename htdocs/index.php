@@ -275,7 +275,7 @@ function streamAjax() {
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             complete: function (data) {
-		    var response = JSON.stringify(data);
+		    var response = JSON.parse(data);
 		    console.log(response.responseText);
 		    drawTeacher(response.responseText);
                     setTimeout(streamAjax, 1000 / fps);
