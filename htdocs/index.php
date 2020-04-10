@@ -96,42 +96,7 @@ Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location
 
 
 <script>
-	// example from https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
-
-	var video = document.querySelector("#videoElement");
 	
-	var startVideo = document.querySelector("#start");
-    startVideo.addEventListener("click", start, false);
-	function start(e) {
-
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-    })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}}
-
-	var stopVideo = document.querySelector("#stop");
-    stopVideo.addEventListener("click", stop, false);
-
-    function stop(e) {
-      var stream = video.srcObject;
-      var tracks = stream.getTracks();
-
-      for (var i = 0; i < tracks.length; i++) {
-        var track = tracks[i];
-        track.stop();
-      }
-
-      video.srcObject = null;
-    }
-
-		
-		
-		
 		
 // Google OAuth2.0
 function oauthSignIn() {
