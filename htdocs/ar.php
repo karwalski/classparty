@@ -69,7 +69,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       // The solar system is big (citation needed). Scale it down so that users
       // can move around the planets more easily.
       
-      textCP.rotation.y += 0.5;
+      textCP.rotation.x += 0.5;
       
 
       
