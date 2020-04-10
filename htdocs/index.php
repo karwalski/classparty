@@ -277,12 +277,8 @@ function streamAjax() {
             success: function (response) {
 		    console.log("sanity success");
 		    drawTeacher(response);
-
-            },
-            complete: function (response) {
-		    console.log("sanity complete");
-                    // Schedule the next
                     setTimeout(streamAjax, 1000 / fps);
+
             }
     });
 }
