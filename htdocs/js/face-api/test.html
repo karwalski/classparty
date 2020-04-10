@@ -11,15 +11,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </head>
 <body>
-   <div id="navbar"></div>
+  <div id="navbar"></div>
   <div class="center-content page-container">
 
     <div class="progress" id="loader">
       <div class="indeterminate"></div>
     </div>
+    <div style="position: relative" class="margin">
       <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
-      <canvas id="overlay" style="background-color: white;"/>
-     <div class="row side-by-side">
+      <canvas id="overlay" />
+    </div>
+
+    <div class="row side-by-side">
 
       <!-- face_detector_selection_control -->
       <div id="face_detector_selection_control" class="row input-field" style="margin-right: 20px;">
@@ -115,7 +118,7 @@
 
   <script>
     let forwardTimes = []
-    let withBoxes = false
+    let withBoxes = true
 
     function onChangeHideBoundingBoxes(e) {
       withBoxes = !$(e.target).prop('checked')
@@ -172,7 +175,11 @@
 
     function updateResults() {}
 
-
+    $(document).ready(function() {
+      renderNavBar('#navbar', 'webcam_face_landmark_detection')
+      initFaceDetectionControls()
+      run()
+    })
   </script>
 </body>
 </html>
