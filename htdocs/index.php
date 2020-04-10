@@ -18,20 +18,43 @@
 </head>
 
 <body>	<div id="top-menu">
-	<div class="top-menu-links">AR Meeting</div><div class="top-menu-links">Brain Break</div><div class="top-menu-links">Google Classrom</div>
+	<div class="top-menu-links">AR Meeting</div>
+	<div class="top-menu-links">Brain Break</div>
+	<div class="top-menu-links">Google Classrom</div>
+	<div class="top-menu-links" onClick="oauthSignIn()">Sign In</div>
 	</div><BR/>
 	<div id="banner">
 		<H1>ClassParty</H1>
-	</div><BR/>
-	Welcome!<BR />
+	</div>
+	
+	
+	<div id="sidebar">
+		<h2>Today</h2>
+	<div class="sidebar-lessons">History</div>
+	<div class="sidebar-lessons">Math</div>
+	<div class="sidebar-lessons">Brain Break</div>
+	<div class="sidebar-lessons">Science</div>
+	<div class="sidebar-lessons">Science</div>
+	<div class="sidebar-lessons">Brain Break</div>
+	<div class="sidebar-lessons">Physical Education</div>
+	<div class="sidebar-lessons">Art</div>
+	</div>
+	
+	<div id="content">
+	<div id="feed">
+		
+	<div class="post pinned">
+		Welcome!<BR />
 	<BR />
 	<BR />
-	This is a placeholder page for the ACS #flattenthecurvehack challenge<BR />
-	<BR />
-	<button onClick="oauthSignIn()">Test Google Auth</button><BR />
-	<DIV id="raw"></DIV>
-	<BR />
-	<strong>Webcam example</strong></BR>
+	This is a placeholder page for the ACS #flattenthecurvehack challenge
+		</div>
+		
+			<strong>My classes</strong><BR />
+		<DIV id="raw"></DIV>
+		</div>
+		<div id="post">
+	<strong>My webcam</strong></BR>
 
 
 		<div id="container">
@@ -40,6 +63,16 @@
 	</video>
 			<button id="start">Start Video</button><button id="stop">Stop Video</button>
 </div>
+		</div>
+		</div>
+	<div id="post">
+				<strong>VR Example</strong></BR>
+	 <div id="vrview"></div>
+	</div>
+	</div>
+	
+	
+
 <script>
 	// example from https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
 
@@ -75,8 +108,7 @@ if (navigator.mediaDevices.getUserMedia) {
     }
 </script>
 
-			<strong>VR example from https://developers.google.com/vr/develop/web/vrview-web</strong></BR>
-	 <div id="vrview"></div>
+
 	
 
     <script src="/vrview.min.js"></script>
