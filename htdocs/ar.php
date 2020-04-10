@@ -69,7 +69,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       // The solar system is big (citation needed). Scale it down so that users
       // can move around the planets more easily.
       solarSystem.scale = [0.1, 0.1, 0.1];
-      scene.addNode(solarSystem);
+      // scene.addNode(solarSystem);
       // Still adding a skybox, but only for the benefit of the inline view.
       
       var skybox = new SkyboxNode({url: 'chichen-itza.jpg'});
