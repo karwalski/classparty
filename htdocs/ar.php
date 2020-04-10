@@ -69,15 +69,16 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       // The solar system is big (citation needed). Scale it down so that users
       // can move around the planets more easily.
       // solarSystem.scale = [0.1, 0.1, 0.1];
-      scene.addNode(textCP);
       
-      scene.matrix = new Float32Array([
+      
+      textCP.matrix = new Float32Array([
       1, 0, 0, 0,
       0, 1, 0, 0,
       0, 0, 1, 0,
       -0.3625, 0.3625, 0.02, 1,
     ]);
       
+      scene.addNode(textCP);
       
       // Still adding a skybox, but only for the benefit of the inline view.
       
