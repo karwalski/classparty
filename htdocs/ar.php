@@ -28,7 +28,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   </head>
   <body>
     <header>
-      <details open>
+      <details>
         <summary>Immersive AR Session</summary>
         <p>
           This sample demonstrates how to use an 'immersive-ar' XRSession to
