@@ -163,7 +163,7 @@ function goToCourse(courseId) {
 		  var xhttp = new XMLHttpRequest();
 			var server = "https://classroom.googleapis.com/v1/";
 			var request = "courses/" + courseId + "/courseWork";
-			var params = "?studentId=me&courseStates=ACTIVE";
+			var params = "?courseWorkStates=PUBLISHED";
 		  xhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
 			// Raw output
