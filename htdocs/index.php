@@ -135,6 +135,8 @@ function getCookie(cname) {
 	
 if (getCookie("access_token")) {	
 	
+	document.getElementById('signin').style.display = none;
+	
 		  var xhttp = new XMLHttpRequest();
 			var server = "https://classroom.googleapis.com/v1/";
 			var request = "courses";
@@ -151,27 +153,7 @@ if (getCookie("access_token")) {
 				document.getElementById("sidebar").innerHTML += '<div class="sidebar-lessons" onClick="goToCourse(' + response.courses[i].id + ')">' + response.courses[i].name + '</div>'; 
 			    }
 			    
-/*
-{
-  "courses": [
-    {
-      "id": "68900450360",
-      "name": "Setting up a website",
-      "descriptionHeading": "Setting up a website",
-      "ownerId": "111937093337482656824",
-      "creationTime": "2020-04-09T12:02:28.394Z",
-      "updateTime": "2020-04-09T12:02:27.529Z",
-      "enrollmentCode": "hcwflwr",
-      "courseState": "ACTIVE",
-      "alternateLink": "https://classroom.google.com/c/Njg5MDA0NTAzNjBa",
-      "teacherGroupEmail": "Setting_up_a_website_teachers_bdc92328@classparty.net",
-      "courseGroupEmail": "Setting_up_a_website_5361b82c@classparty.net",
-      "guardiansEnabled": false,
-      "calendarId": "classparty.net_classroom0836ec98@group.calendar.google.com"
-    }
-  ]
-}
-*/
+
 				
 		    }
 		  }
