@@ -85,7 +85,7 @@ function oauthSignIn() {
   var params = {'client_id': '522572922800-m16cu28278v69hud1po3v8kt3f7atfeo.apps.googleusercontent.com',
                 'redirect_uri': 'https://classparty.net/',
                 'response_type': 'token',
-                'scope': 'https://www.googleapis.com/auth/classroom.courses.readonly',
+                'scope': 'https://www.googleapis.com/auth/classroom.courses.readonly https://www.googleapis.com/auth/classroom.coursework.me.readonly',
                 'include_granted_scopes': 'true',
                 'state': 'pass-through value'};
 
@@ -102,7 +102,10 @@ function oauthSignIn() {
   document.body.appendChild(form);
   form.submit();
 }
-		
+	
+const urlParams = new URLSearchParams(window.location.hash);
+	
+if (urlParams.get('token_type') != NULL) {	
 		  var xhttp = new XMLHttpRequest();
 			var server = "https://classroom.googleapis.com/v1/";
 			var request = "courses";
@@ -144,16 +147,43 @@ function oauthSignIn() {
 		    }
 		  }
 		  xhttp.open("GET", server + request + params, true);
-		const urlParams = new URLSearchParams(window.location.hash);
+		
 			xhttp.setRequestHeader("Authorization", urlParams.get('token_type') + " " + urlParams.get('access_token'));
 			xhttp.setRequestHeader("Content-Type", "application/json");
 		  xhttp.send();
 					
+}
+	
 	
 	// Course control
 	
 function goToCourse(courseId) {
-	alert("Course ID: " + courseId);
+
+	
+		  var xhttp = new XMLHttpRequest();
+			var server = "https://classroom.googleapis.com/v1/";
+			var request = "courses/" + courseId + "/courseWork";
+			var params = "?studentId=me&courseStates=ACTIVE";
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+			// Raw output
+			document.getElementById("raw").innerHTML = this.responseText;
+			var response = JSON.parse(this.responseText);
+			    document.getElementById("feed").innerHTML = "";
+			    	// </div>
+			    for (var i = 0; i < response.coursework.length; i++)
+			    {
+				document.getElementById("feed").innerHTML += '<div class="post" onClick="goToCourseWork(' + response.coursework[i].id + ')">' + response.coursework[i].title + '</div>'; 
+			    }	
+	
+	
+			    }
+		  }
+		  xhttp.open("GET", server + request + params, true);
+		
+			xhttp.setRequestHeader("Authorization", urlParams.get('token_type') + " " + urlParams.get('access_token'));
+			xhttp.setRequestHeader("Content-Type", "application/json");
+		  xhttp.send();
 }
 	
 	
