@@ -18,7 +18,7 @@
 </head>
 
 <body>	<div id="top-menu">
-		AR Meeting - Brain Break - Google Classrom
+	<div class="top-menu-links">AR Meeting</div><div class="top-menu-links">Brain Break</div><div class="top-menu-links">Google Classrom</div>
 	</div><BR/>
 	<div id="banner">
 		<H1>ClassParty</H1>
