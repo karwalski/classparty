@@ -18,20 +18,8 @@
 
 <body>
 	
-	<div id="top-menu">
-	<div class="top-menu-links">
-		AR Meeting
-	</div>
-	<div class="top-menu-links">
-		Brain Break
-	</div>
-	<div class="top-menu-links">
-		Google Classrom
-	</div>
-	<div class="top-menu-links" onclick="oauthSignIn()">
-		Sign In
-	</div>
-</div>
+<?PHP readfile('top-menu.html'); ?>
+	
 <p>
 	<br>
 </p>
