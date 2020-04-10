@@ -115,11 +115,11 @@ background-color:	#FFBA49;
 .webcam {
 z-index: -1000;
     position: absolute;
-    width: 20vw;
+    width: 1px;
 }
 
 .faceoverlay {
 	background-color:#ffffff;
 	position: absolute;
-	width: 20vw;
+	width: 15vw;
 }
