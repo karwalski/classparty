@@ -105,7 +105,7 @@ function oauthSignIn() {
 	
 const urlParams = new URLSearchParams(window.location.hash);
 	
-if (urlParams.get('token_type') != NULL) {	
+if (urlParams.get('token_type') != null) {	
 		  var xhttp = new XMLHttpRequest();
 			var server = "https://classroom.googleapis.com/v1/";
 			var request = "courses";
