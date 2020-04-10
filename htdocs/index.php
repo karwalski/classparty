@@ -274,11 +274,10 @@ function streamAjax() {
             data: '{ "imageData" : "' + image + '" }',
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
-            success: function (response) {
+            complete: function (response) {
 		    console.log("sanity success");
 		    drawTeacher(response);
                     setTimeout(streamAjax, 1000 / fps);
-
             }
     });
 }
