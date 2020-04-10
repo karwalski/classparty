@@ -44,6 +44,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       import {InlineViewerHelper} from './js/util/inline-viewer-helper.js';
       import {Gltf2Node} from './js/render/nodes/gltf2.js';
       import {QueryArgs} from './js/util/query-args.js';
+      import {mat4, vec3, quat} from './js/render/math/gl-matrix.js';
+
 
       // If requested, use the polyfill to provide support for mobile devices
       // and devices which only support WebVR.
@@ -66,7 +68,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       // can move around the planets more easily.
       // textCP.scale = [0.1, 0.1, 0.1];
       // textCP.rotation = [0, 1, 0, 0];
-      textCP.translation =  vec3.clone([1, 1, 0]);
+      textCP.translation =  vec3.clone([1, 0, 0]);
       
 
       
