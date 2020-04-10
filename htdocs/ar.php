@@ -65,11 +65,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       let gl = null;
       let renderer = null;
       let scene = new Scene();
-      let solarSystem = new Gltf2Node({url: 'media/gltf/classparty.gltf'});
+      let textCP = new Gltf2Node({url: 'media/gltf/classparty.gltf'});
       // The solar system is big (citation needed). Scale it down so that users
       // can move around the planets more easily.
-      solarSystem.scale = [0.1, 0.1, 0.1];
-      // scene.addNode(solarSystem);
+      // solarSystem.scale = [0.1, 0.1, 0.1];
+      scene.addNode(textCP);
       // Still adding a skybox, but only for the benefit of the inline view.
       
       var skybox = new SkyboxNode({url: 'chichen-itza.jpg'});
