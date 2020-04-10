@@ -91,13 +91,13 @@
 		</div>
 		<div class="post">
 			<strong>VR Example</strong><br>
-			<div id="vrview"></div>
+			<a href="ar.php">test link</a>
 		</div>
 	</div>
 </div>
 	
 
-    <script src="vrview.min.js"></script>
+
 <script>
 	// example from https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
 
@@ -133,14 +133,6 @@ if (navigator.mediaDevices.getUserMedia) {
     }
 
 		
-	window.addEventListener('load', onVrViewLoad);
-
-function onVrViewLoad() {
-  // Selector '#vrview' finds element with id 'vrview'.
-  var vrView = new VRView.Player('#vrview', {
-    image: 'chichen-itza.jpg'
-  });
-}	
 		
 		
 		
