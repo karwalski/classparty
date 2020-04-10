@@ -127,7 +127,7 @@ function getCookie(cname) {
 	
 if (getCookie("access_token")) {	
 	
-	document.getElementById('signin').style.display = none;
+	document.getElementById('signin').style.display = 'none';
 	
 		  var xhttp = new XMLHttpRequest();
 			var server = "https://classroom.googleapis.com/v1/";
