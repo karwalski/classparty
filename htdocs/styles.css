@@ -62,3 +62,29 @@ a:hover {
 a:active {
   color: #00716C;
 }
+
+#sidebar {
+	 width: 10vw;
+	display: inline-block;
+	
+}
+
+.sidebar-lessons {
+	background-color: #20A39E;
+    width: 8vw;
+    height: 5vw;
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
+    display: block;
+    /* line-height: 5vw; */
+	
+}
+
+#content {
+	    display: inline-block;
+    margin-left: 12vw;
+    width: 50vw;
+    margin-right: 20vw;
+	
+}
