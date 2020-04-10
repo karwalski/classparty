@@ -15,7 +15,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Quando&display=swap" rel="stylesheet">
 
 	<style>
-		.body {
+		body {
 			font-family: 'Quando', serif;
 
 		}
