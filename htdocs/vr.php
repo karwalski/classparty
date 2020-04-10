@@ -68,7 +68,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       let gl = null;
       let renderer = null;
       let scene = new Scene();
-      scene.addNode(new Gltf2Node({url: 'media/gltf/space/space.gltf'}));
+      // scene.addNode(new Gltf2Node({url: 'media/gltf/space/space.gltf'}));
       scene.addNode(new SkyboxNode({url: 'chichen-itza.jpg'}));
 
       // Checks to see if WebXR is available and, if so, queries a list of
