@@ -1,6 +1,6 @@
 <?PHP
 
-$imageData = $_POST['imgageData'];
+$imageData = $_POST['imageData'];
 $img = imagecreatefromstring(base64_decode($imageData));
 // and process $img with your image library here
 echo $imageData;
