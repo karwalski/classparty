@@ -16,7 +16,7 @@
 		}
 
 #top-menu {
- background-color: #D6D8D9;
+ /* background-color: #D6D8D9; */
       color: #EF5B5B;
 	    position: fixed;
     display: block;
@@ -37,15 +37,15 @@
 
 #banner {
  background-color: #FFBA49;
-	height: 14em;
+	/* height: 14em; */
 	
 }
 
 #banner h1 {
     margin-top: 30px;
       color: #D6D8D9;
-      font-size: 10em;
-      text-align: center;
+      /* font-size: 10em;
+      text-align: center; */
 	font-weight: 1;
 }
 
