@@ -49,8 +49,8 @@
 			This is a placeholder page for the ACS #flattenthecurvehack challenge
 		</div>
 		<div class="post">
-			Teacher stream<BR />
-			<canvas id="teacher" width="640" height="480"></canvas>
+			Test post
+			
 		</div>
 
 		<div class="post">
@@ -275,16 +275,20 @@ function streamAjax() {
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             complete: function (response) {
-		   //  console.log(response.responseText);
+		   
 		    drawTeacher(response.responseText);
                     setTimeout(streamAjax, 1000 / fps);
             }
     });
 }
-setTimeout(streamAjax, 1000 / fps);
+	
+// Disable ajax sending to server for now
+// setTimeout(streamAjax, 1000 / fps);
 	
 	
 	function drawTeacher(response) {
+		// Add frame back into html for echo
+		// <canvas id="teacher" width="640" height="480"></canvas>
 			   // console.log("data:image/png;base64," + response);
 		    	var canvas = document.getElementById("teacher");
 			var ctx = canvas.getContext("2d");
