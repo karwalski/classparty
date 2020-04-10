@@ -276,8 +276,16 @@ function streamAjax() {
             dataType: 'json',
             success: function (data) {
                     // $('#hidden').val(data);// first set the value  
-		    console.log(data);
-		    image.src = "data:image/png;base64," + data;
+		    var teacher = JSON.parse(data);
+		    
+		    var canvas = document.getElementById("teacher");
+var ctx = canvas.getContext("2d");
+
+var image = new Image();
+image.onload = function() {
+  ctx.drawImage(image, 0, 0);
+};
+		    image.src = "data:image/png;base64," + teacher.imageData;
             },
             complete: function (data) {
                     // Schedule the next
