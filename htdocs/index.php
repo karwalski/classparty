@@ -254,7 +254,10 @@ function goToCourse(courseId) {
         $(document).ready(function() {
       initFaceDetectionControls()
       run()
-    })
+		
+	$.post(“stream.php”,  { ID:overlay, imgData: canvas.toDataURL(‘image/jpeg’) })
+	.done( function(streamResponse){  console.log(streamResponse);  } );
+    	})
 	
 	</script>
 </body>
