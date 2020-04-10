@@ -68,15 +68,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       let textCP = new Gltf2Node({url: 'media/gltf/classparty.gltf'});
       // The solar system is big (citation needed). Scale it down so that users
       // can move around the planets more easily.
-      // solarSystem.scale = [0.1, 0.1, 0.1];
+      textCP.scale = [0.1, 0.1, 0.1];
+      textCP.translate [10, 10, 10];
       
-      
-      textCP.matrix = new Float32Array([
-      1, 0, 0, 0,
-      0, 1, 0, 0,
-      0, 0, 1, 0,
-      -0.3625, 0.3625, 0.02, 1,
-    ]);
+
       
       scene.addNode(textCP);
       
