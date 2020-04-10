@@ -74,7 +74,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       textCP.matrix = new Float32Array([
       0.01, 0, 0, 0,
       0, 0.01, 0, 0,
-      0, 0, 0.01, 0,
+      0, 0, 90, 0,
       -0.3625, 0.3625, 0.02, 1,
     ]);
       
