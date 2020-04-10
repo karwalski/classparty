@@ -17,8 +17,12 @@
 
 </head>
 
-<body>
-	<H1>ClassParty</H1><BR/>
+<body>	<div id="top-menu">
+		AR Meeting - Brain Break - Google Classrom
+	</div><BR/>
+	<div id="banner">
+		<H1>ClassParty</H1>
+	</div><BR/>
 	Welcome!<BR />
 	<BR />
 	<BR />
