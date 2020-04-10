@@ -72,15 +72,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       scene.addNode(solarSystem);
       // Still adding a skybox, but only for the benefit of the inline view.
       
+      let skybox = new SkyboxNode({url: 'chichen-itza.jpg'});
       var params = new URLSearchParams(document.location.search);
       
-            if(params.get("location"))
+            if(params.get("location") !== null)
       {
         let skybox = new SkyboxNode({url: params.get("location")});
-      }
-      else
-      {
-        let skybox = new SkyboxNode({url: 'chichen-itza.jpg'});
       }
       
       
