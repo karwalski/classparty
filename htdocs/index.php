@@ -13,7 +13,7 @@
   <meta name="description" content="ClassParty">
   <meta name="author" content="karwalski">
 	<link href="https://fonts.googleapis.com/css?family=Quando&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<link rel="icon" type="image/png" href="favicon.png">
 
 </head>
