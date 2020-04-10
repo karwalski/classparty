@@ -48,7 +48,6 @@
 			<br>
 			This is a placeholder page for the ACS #flattenthecurvehack challenge
 		</div>
-		<div class="post">
 
 		<div class="post">
 			<strong>VR Excursion examples</strong><br>
