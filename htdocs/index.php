@@ -274,8 +274,10 @@ function streamAjax() {
             data: '{ "imageData" : "' + image + '" }',
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
-            complete: function (response) {
-		    drawTeacher(JSON.stringify(response).responseText);
+            complete: function (data) {
+		    var response = JSON.stringify(data);
+		    console.log(response.responseText);
+		    drawTeacher(response.responseText);
                     setTimeout(streamAjax, 1000 / fps);
             }
     });
