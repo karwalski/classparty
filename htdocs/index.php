@@ -275,10 +275,11 @@ function streamAjax() {
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function (data) {
-		    var canvas = document.getElementById("teacher");
+		    	var canvas = document.getElementById("teacher");
 			var ctx = canvas.getContext("2d");
 			var image = new Image();
 		    image.src = "data:image/png;base64," + data;
+		    ctx.clearRect(0,0,640,480);
 		    ctx.drawImage(image, 0, 0);
             },
             complete: function (data) {
