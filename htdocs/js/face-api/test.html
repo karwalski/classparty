@@ -19,7 +19,7 @@
     </div>
     <div style="position: relative" class="margin">
       <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
-      <canvas id="overlay"  style="background:color:#ffffff;"/>
+      <canvas id="overlay"  style="background-color:#ffffff;"/>
     </div>
 
     <div class="row side-by-side" style="display:none;">
@@ -175,6 +175,11 @@
 
     function updateResults() {}
 
+        $(document).ready(function() {
+      initFaceDetectionControls()
+      run()
+    })
+    
   </script>
 </body>
 </html>
