@@ -284,7 +284,7 @@ function streamAjax() {
             }
     });
 }
-setTimeout(streamAjax, interval);
+setTimeout(streamAjax, 1000 / fps);
 	
 	
 
