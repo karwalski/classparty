@@ -77,7 +77,7 @@
 			<div id="raw"></div>
 		</div>
 		<div class="post">
-			<strong>My faceoutline only</strong><br>
+			<strong>My virtual face</strong><br>
 			      <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
       <canvas id="overlay" class="faceoverlay"/>
 
