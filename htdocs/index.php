@@ -36,33 +36,7 @@
 	</h1>
 </div>
 <div id="sidebar">
-	<h2>
-		Today
-	</h2>
-	<div class="sidebar-lessons">
-		History
-	</div>
-	<div class="sidebar-lessons">
-		Math
-	</div>
-	<div class="sidebar-lessons">
-		Brain Break
-	</div>
-	<div class="sidebar-lessons">
-		Science
-	</div>
-	<div class="sidebar-lessons">
-		Science
-	</div>
-	<div class="sidebar-lessons">
-		Brain Break
-	</div>
-	<div class="sidebar-lessons">
-		Physical Education
-	</div>
-	<div class="sidebar-lessons">
-		Art
-	</div>
+
 </div>
 <div id="content">
 	<div id="feed">
@@ -138,6 +112,34 @@ function oauthSignIn() {
 			// Raw output
 			document.getElementById("raw").innerHTML = this.responseText;
 			var response = JSON.parse(this.responseText);
+			    
+			    	// '<div class="sidebar-lessons">History</div>'
+			    for (var i = 0; i < response.courses; i++)
+			    {
+				document.getElementById("sidebar").innerHTML += '<div class="sidebar-lessons" onClick="goToCourse(' + response.courses[i].id + ')">' + response.courses[i].name + '</div>'; 
+			    }
+			    
+/*
+{
+  "courses": [
+    {
+      "id": "68900450360",
+      "name": "Setting up a website",
+      "descriptionHeading": "Setting up a website",
+      "ownerId": "111937093337482656824",
+      "creationTime": "2020-04-09T12:02:28.394Z",
+      "updateTime": "2020-04-09T12:02:27.529Z",
+      "enrollmentCode": "hcwflwr",
+      "courseState": "ACTIVE",
+      "alternateLink": "https://classroom.google.com/c/Njg5MDA0NTAzNjBa",
+      "teacherGroupEmail": "Setting_up_a_website_teachers_bdc92328@classparty.net",
+      "courseGroupEmail": "Setting_up_a_website_5361b82c@classparty.net",
+      "guardiansEnabled": false,
+      "calendarId": "classparty.net_classroom0836ec98@group.calendar.google.com"
+    }
+  ]
+}
+*/
 				
 		    }
 		  }
@@ -147,7 +149,15 @@ function oauthSignIn() {
 			xhttp.setRequestHeader("Content-Type", "application/json");
 		  xhttp.send();
 					
-		
+	
+	// Course control
+	
+function goToCourse(courseId) {
+	alert("Course ID: " + courseId);
+}
+	
+	
+	
 	// Face landmark webcam script
 	
 	    let forwardTimes = []
