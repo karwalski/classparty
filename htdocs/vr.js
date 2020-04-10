@@ -13,95 +13,102 @@
  * limitations under the License.
  */
 var vrView;
-
-// All the scenes for the experience
-var scenes = {
-  petra: {
-    image: 'petra.jpg',
-    preview: 'petra-preview.jpg'
-  },
-  christTheRedeemer: {
-    image: 'christ-redeemer.jpg',
-    preview: 'christ-redeemer-preview.jpg'
-  },
-  machuPicchu: {
-    image: 'machu-picchu.jpg',
-    preview: 'machu-picchu-preview.jpg'
-  },
-  chichenItza: {
-    image: 'chichen-itza.jpg',
-    preview: 'chichen-itza-preview.jpg'
-  },
-  tajMahal: {
-    image: 'taj-mahal.jpg',
-    preview: 'taj-mahal-preview.jpg'
-  },
-};
+var playButton;
+var muteButton;
 
 function onLoad() {
+  // Load VR View.
   vrView = new VRView.Player('#vrview', {
     width: '100%',
     height: 480,
-    image: 'petra.jpg',
-    is_stereo: false,
-    is_autopan_off: true
+    video: 'congo_2048.mp4',
+    is_stereo: true,
+    loop: false,
+    //hide_fullscreen_button: true,
+    //volume: 0.4,
+    //muted: true,
+    //is_debug: true,
+    //default_heading: 90,
+    //is_yaw_only: true,
+    //is_vr_off: true,
   });
+
+  playButton = document.querySelector('#toggleplay');
+  muteButton = document.querySelector('#togglemute');
+  volumeRange = document.querySelector('#volumerange');
+  timeContainer = document.querySelector('#time');
+
+  playButton.addEventListener('click', onTogglePlay);
+  muteButton.addEventListener('click', onToggleMute);
+  volumeRange.addEventListener('change', onVolumeChange);
+  volumeRange.addEventListener('input', onVolumeChange);
+
+  // If you set mute: true, uncomment the line bellow.
+  // muteButton.classList.add('muted');
 
   vrView.on('ready', onVRViewReady);
-  vrView.on('modechange', onModeChange);
-  vrView.on('getposition', onGetPosition);
-  vrView.on('error', onVRViewError);
-}
 
-function loadScene(id) {
-  console.log('loadScene', id);
-
-  // Set the image
-  vrView.setContent({
-    image: scenes[id].image,
-    preview: scenes[id].preview,
-    is_autopan_off: true
+  vrView.on('play', function() {
+    console.log('media play');
+    console.log(vrView.getDuration());
   });
+  vrView.on('pause', function() {
+    console.log('media paused');
+  });
+  vrView.on('timeupdate', function(e) {
+    var current = formatTime(e.currentTime);
+    var duration = formatTime(e.duration);
+    timeContainer.innerText = current + ' | ' + duration;
+    console.log('currently playing ' + current + ' secs.');
+  });
+  vrView.on('ended', function() {
+    console.log('media ended');
+    playButton.classList.add('paused');
+  });
+}
 
-  // Unhighlight carousel items
-  var carouselLinks = document.querySelectorAll('ul.carousel li a');
-  for (var i = 0; i < carouselLinks.length; i++) {
-    carouselLinks[i].classList.remove('current');
+function onVRViewReady() {
+  console.log('vrView.isPaused', vrView.isPaused);
+  // Set the initial state of the buttons.
+  if (vrView.isPaused) {
+    playButton.classList.add('paused');
+  } else {
+    playButton.classList.remove('paused');
   }
-    vrView.getPosition();
-  // Highlight current carousel item
-  document.querySelector('ul.carousel li a[href="#' + id + '"]')
-      .classList.add('current');
 }
 
-function onVRViewReady(e) {
-  console.log('onVRViewReady');
-
-  // Create the carousel links
-  var carouselItems = document.querySelectorAll('ul.carousel li a');
-  for (var i = 0; i < carouselItems.length; i++) {
-    var item = carouselItems[i];
-    item.disabled = false;
-
-    item.addEventListener('click', function(event) {
-      event.preventDefault();
-      loadScene(event.target.parentNode.getAttribute('href').substring(1));
-    });
+function onTogglePlay() {
+  if (vrView.isPaused) {
+    vrView.play();
+    playButton.classList.remove('paused');
+  } else {
+    vrView.pause();
+    playButton.classList.add('paused');
   }
-
-  loadScene('petra');
 }
 
-function onModeChange(e) {
-  console.log('onModeChange', e.mode);
+function onToggleMute() {
+  var isMuted = muteButton.classList.contains('muted');
+  vrView.mute(!isMuted);
+  muteButton.classList.toggle('muted');
 }
 
-function onVRViewError(e) {
-  console.log('Error! %s', e.message);
+function onVolumeChange(e) {
+  vrView.setVolume(volumeRange.value / 100);
 }
 
-function onGetPosition(e) {
-    console.log(e)
+function formatTime(time) {
+  time = !time || typeof time !== 'number' || time < 0 ? 0 : time;
+
+  var minutes = Math.floor(time / 60) % 60;
+  var seconds = Math.floor(time % 60);
+
+  minutes = minutes <= 0 ? 0 : minutes;
+  seconds = seconds <= 0 ? 0 : seconds;
+
+  var result = (minutes < 10 ? '0' + minutes : minutes) + ':';
+  result += seconds < 10 ? '0' + seconds : seconds;
+  return result;
 }
 
 window.addEventListener('load', onLoad);
