@@ -17,60 +17,83 @@
 
 </head>
 
-<body>	<div id="top-menu">
-	<div class="top-menu-links">AR Meeting</div>
-	<div class="top-menu-links">Brain Break</div>
-	<div class="top-menu-links">Google Classrom</div>
-	<div class="top-menu-links" onClick="oauthSignIn()">Sign In</div>
-	</div><BR/>
-	<div id="banner">
-		<H1>ClassParty</H1>
+<body>
+	
+	<div id="top-menu">
+	<div class="top-menu-links">
+		AR Meeting
 	</div>
-	
-	
-	<div id="sidebar">
-		<h2>Today</h2>
-	<div class="sidebar-lessons">History</div>
-	<div class="sidebar-lessons">Math</div>
-	<div class="sidebar-lessons">Brain Break</div>
-	<div class="sidebar-lessons">Science</div>
-	<div class="sidebar-lessons">Science</div>
-	<div class="sidebar-lessons">Brain Break</div>
-	<div class="sidebar-lessons">Physical Education</div>
-	<div class="sidebar-lessons">Art</div>
+	<div class="top-menu-links">
+		Brain Break
 	</div>
-	
-	<div id="content">
-	<div id="feed">
-		
-	<div class="post pinned">
-		Welcome!<BR />
-	<BR />
-	<BR />
-	This is a placeholder page for the ACS #flattenthecurvehack challenge
-		</div>
-		
-			<strong>My classes</strong><BR />
-		<DIV id="raw"></DIV>
-		</div>
-		<div id="post">
-	<strong>My webcam</strong></BR>
-
-
-		<div id="container">
-	<video autoplay="true" id="videoElement">
-	
-	</video>
-			<button id="start">Start Video</button><button id="stop">Stop Video</button>
+	<div class="top-menu-links">
+		Google Classrom
+	</div>
+	<div class="top-menu-links" onclick="oauthSignIn()">
+		Sign In
+	</div>
 </div>
-		</div>
-	<div id="post">
-				<strong>VR Example</strong></BR>
-	 <div id="vrview"></div>
-		</div>
-
+<p>
+	<br>
+</p>
+<div id="banner">
+	<h1>
+		ClassParty
+	</h1>
+</div>
+<div id="sidebar">
+	<h2>
+		Today
+	</h2>
+	<div class="sidebar-lessons">
+		History
 	</div>
-	
+	<div class="sidebar-lessons">
+		Math
+	</div>
+	<div class="sidebar-lessons">
+		Brain Break
+	</div>
+	<div class="sidebar-lessons">
+		Science
+	</div>
+	<div class="sidebar-lessons">
+		Science
+	</div>
+	<div class="sidebar-lessons">
+		Brain Break
+	</div>
+	<div class="sidebar-lessons">
+		Physical Education
+	</div>
+	<div class="sidebar-lessons">
+		Art
+	</div>
+</div>
+<div id="content">
+	<div id="feed">
+		<div class="post pinned">
+			Welcome!<br>
+			<br>
+			<br>
+			This is a placeholder page for the ACS #flattenthecurvehack challenge
+		</div>
+		<div class="post">
+			<strong>My classes</strong><br>
+			<div id="raw"></div>
+		</div>
+		<div class="post">
+			<strong>My webcam</strong><br>
+			<div id="container">
+				<video autoplay="true" id="videoElement"></video> <button id="start">Start Video</button><button id="stop">Stop Video</button>
+			</div>
+		</div>
+		<div class="post">
+			<strong>VR Example</strong><br>
+			<div id="vrview"></div>
+		</div>
+	</div>
+</div>
 	
 
 <script>
