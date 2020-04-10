@@ -114,7 +114,7 @@ function oauthSignIn() {
 			var response = JSON.parse(this.responseText);
 			    
 			    	// '<div class="sidebar-lessons">History</div>'
-			    for (var i = 0; i < response.courses; i++)
+			    for (var i = 0; i < response.courses.length; i++)
 			    {
 				document.getElementById("sidebar").innerHTML += '<div class="sidebar-lessons" onClick="goToCourse(' + response.courses[i].id + ')">' + response.courses[i].name + '</div>'; 
 			    }
