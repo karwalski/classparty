@@ -263,7 +263,7 @@ export class StatsViewer extends Node {
 
     this._lastSegment = (this._lastSegment+1) % SEGMENTS;
     
-    this._sevenSegmentNode.text = `CLASSPARTY`;
+    this._sevenSegmentNode.text = `C1A55PAA74`;
     //this._sevenSegmentNode.text = `${this._fpsAverage} FP5`;
   }
 }
