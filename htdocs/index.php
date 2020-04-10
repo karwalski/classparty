@@ -91,7 +91,8 @@
 		</div>
 		<div class="post">
 			<strong>VR Example</strong><br>
-			<a href="ar.php">test link</a>
+			<a href="vr.php">VR test link</a><br />
+			<a href="ar.php">AR test link</a>
 		</div>
 	</div>
 </div>
