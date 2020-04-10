@@ -35,26 +35,6 @@
             ]
         }
     ],
-    "buffers": [
-        {
-            "byteLength": 157848,
-            "uri": "result.bin"
-        }
-    ],
-    "bufferViews": [
-        {
-            "buffer": 0,
-            "byteOffset": 0,
-            "byteLength": 52728,
-            "target": 34962
-        },
-        {
-            "buffer": 0,
-            "byteOffset": 52728,
-            "byteLength": 105120,
-            "target": 34963
-        }
-    ],
     "materials": [
         {
             "name": "DefaultMaterial",
