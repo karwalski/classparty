@@ -277,7 +277,7 @@ function streamAjax() {
             success: function (data) {
                     // $('#hidden').val(data);// first set the value  
 		    // var teacher = JSON.parse(data);
-		    
+		    document.getElementById("teacher").innerHTML = "";
 		    var canvas = document.getElementById("teacher");
 var ctx = canvas.getContext("2d");
 
