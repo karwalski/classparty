@@ -78,8 +78,8 @@
 		</div>
 		<div class="post">
 			<strong>My faceoutline only</strong><br>
-			      <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
-      <canvas id="overlay"  style="background-color:#ffffff;"/>
+			      <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
+      <canvas id="overlay" class="faceoverlay"/>
 
 		</div>
 		<div class="post">
