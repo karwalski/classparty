@@ -73,7 +73,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       // Still adding a skybox, but only for the benefit of the inline view.
       
       
-            if(params.get("location")})
+            if(params.get("location"))
       {
         let skybox = new SkyboxNode({url: params.get("location")});
       }
