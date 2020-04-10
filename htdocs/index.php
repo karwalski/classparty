@@ -31,8 +31,6 @@
 	<br>
 </p>
 <div id="banner">
-	<video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
-	<canvas id="overlay" class="faceoverlay"></canvas>
 	<h1>
 		ClassParty
 	</h1>
@@ -41,6 +39,8 @@
 
 </div>
 <div id="content">
+		<video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
+	<canvas id="overlay" class="faceoverlay"></canvas>
 	<div id="feed">
 		<div class="post pinned">
 			Welcome!<br>
