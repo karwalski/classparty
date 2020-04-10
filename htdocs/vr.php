@@ -68,19 +68,18 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       let gl = null;
       let renderer = null;
       let scene = new Scene();
-      scene.addNode(new Gltf2Node({url: 'media/gltf/classparty.gltf'}));
+      // scene.addNode(new Gltf2Node({url: 'media/gltf/classparty.gltf'}));
       
+    
+            var skybox = new SkyboxNode({url: 'chichen-itza.jpg'});
       var params = new URLSearchParams(document.location.search);
       
-      if(params.get("location"))
+            if(params.get("location") !== null)
       {
-        scene.addNode(new SkyboxNode({url: params.get("location")}));
-      }
-      else
-      {
-        scene.addNode(new SkyboxNode({url: 'chichen-itza.jpg'}));
+        skybox = new SkyboxNode({url: params.get("location")});
       }
       
+      scene.addNode(skybox);
       
       
 
