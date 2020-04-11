@@ -69,7 +69,21 @@
 <div class="container">
   <div class="row">
     <div class="col"  id="sidebar">
-      
+	    <div id="arrow-yellow">
+		    </div>Classes:<BR />
+	    <div id="sidebar-classes">
+		    </div>
+	    
+	    <div id="arrow-yellow">
+		    </div>Brain Break:<BR />
+	    <button type="button" class="btn btn-cp-primary btn-lg" onclick='window.location.href ="ar.php?location=chichen-itza.jpg";'>Brain Break</button>
+	    
+	    <div id="arrow-yellow">
+		    </div>Games:<BR />
+	    <button type="button" class="btn btn-cp-primary btn-lg">Game 1</button>
+	    <button type="button" class="btn btn-cp-primary btn-lg">Game 2</button>
+	    <button type="button" class="btn btn-cp-primary btn-lg">Game 3</button>
+	    
     </div>
     <div class=".col-" id="threeDots" onclick="document.getElementById('sidebar').style.display = document.getElementById('sidebar').style.display == 'none' ? 'inline-block' : 'none';">
       	.<BR />
@@ -196,14 +210,14 @@ if (getCookie("access_token")) {
 
 			var response = JSON.parse(this.responseText);
 			    
-			    document.getElementById("sidebar").innerHTML = "";
+			    document.getElementById("sidebar-classes").innerHTML = "";
 			    	// '<div class="sidebar-lessons">History</div>'
 			    for (var i = 0; i < response.courses.length; i++)
 			    {
 				    //<button type="button" class="btn btn-primary btn-lg"
-				document.getElementById("sidebar").innerHTML += '<button type="button" class="btn btn-primary btn-lg" onClick="goToCourse(' + response.courses[i].id + ')">' + response.courses[i].name + '</button>';        
+				document.getElementById("sidebar-classes").innerHTML += '<button type="button" class="btn btn-cp-primary btn-lg" onClick="goToCourse(' + response.courses[i].id + ')">' + response.courses[i].name + '</button>';        
  			    }
-	  		    document.getElementById("sidebar").innerHTML += '<button type="button" class="btn btn-primary btn-lg" onclick="window.location.href =\'ar.php?location=chichen-itza.jpg\';">Brain Break</button>';        
+	  		    // document.getElementById("sidebar-classes").innerHTML += '<button type="button" class="btn btn-cp-primary btn-lg" onclick="window.location.href =\'ar.php?location=chichen-itza.jpg\';">Brain Break</button>';        
 
 
 				
@@ -236,7 +250,7 @@ function goToCourse(courseId) {
 			    for (var i = 0; i < response.courseWork.length; i++)
 			    {
 				    //<button type="button" class="btn btn-primary btn-lg">Large button</button>
-				document.getElementById("assignments").innerHTML += '<button type="button" class="btn btn-primary btn-lg" onClick="goToCourseWork(' + response.courseWork[i].id + ')">' + response.courseWork[i].title + '</button>';      
+				document.getElementById("assignments").innerHTML += '<button type="button" class="btn btn-cp-primary btn-lg" onClick="goToCourseWork(' + response.courseWork[i].id + ')">' + response.courseWork[i].title + '</button>';      
 			    }	
 	
 	
