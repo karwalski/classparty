@@ -177,8 +177,6 @@ function goToCourse(courseId) {
 			var params = "?courseWorkStates=PUBLISHED";
 		  xhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
-			// Raw output
-			document.getElementById("raw").innerHTML = this.responseText;
 			var response = JSON.parse(this.responseText);
 			    document.getElementById("feed").innerHTML = "";
 			    	// </div>
