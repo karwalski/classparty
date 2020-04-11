@@ -395,7 +395,7 @@ function goToCourse(courseId) {
 	});
 	
 
-var fps = 1;
+var fps = 30; // Recommend between 15-60 fps. Slower internet connections likely need to run at 1fps, however will not have same experience.
 function streamAjax() {
 	
         var image =     document.getElementById("overlay").toDataURL("image/png");
