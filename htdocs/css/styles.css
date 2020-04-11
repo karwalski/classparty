@@ -92,7 +92,7 @@ a:active {
 }
 
 #sidebar {
-    text-align: center;
+    text-align: left;
 	display: inline-block;
 	background-color: #20A39E;
 	 height: 100vh;
@@ -193,6 +193,7 @@ display: inline-block;
     background-color: #ffffff !important;
     margin-bottom: 0.5em;
 	    margin-top: 0.5em;
+	    display: block !important;
 }
 
 .arrow-yellow {
