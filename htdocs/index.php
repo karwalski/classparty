@@ -76,6 +76,7 @@
 	    <div class="arrow-yellow">
 		    </div><span class="arrow-text">Classes:</span><BR />
 	    <div id="sidebar-classes">
+		    <span onclick="oauthSignIn()">SignIn</span> to see your classes.
 		    </div>
 	    
 	    <div class="arrow-yellow">
