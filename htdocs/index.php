@@ -71,7 +71,7 @@
     <div class="col"  id="sidebar">
       
     </div>
-    <div class=".col-" id="threeDots" onclick="document.getElementById('sidebar').style.display = document.getElementById('sidebar').style.display ? 'none' : 'inline-block';">
+    <div class=".col-" id="threeDots" onclick="document.getElementById('sidebar').style.display = document.getElementById('sidebar').style.display == 'none' ? 'inline-block' : 'none';">
       	.<BR />
 	.<BR />
 	.<BR />
