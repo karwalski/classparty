@@ -202,4 +202,12 @@ display: inline-block;
   border-bottom: 20px solid transparent;
   
   border-left: 20px solid #FFBA49;
+	    display: inline-block;
+	    vertical-align: middle;
+	margin-top: 10px;
+}
+.arrow-text {
+	    display: inline-block;
+	    vertical-align: middle;
+	margin-top: 10px;
 }
