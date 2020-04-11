@@ -128,6 +128,13 @@ a:active {
     margin-top: 40px;
 	
 }
+
+#feed {
+height: 100%;
+    overflow: scroll;	
+	
+}
+
 .post {
     min-height: 15em;	
     max-height: 30em;
