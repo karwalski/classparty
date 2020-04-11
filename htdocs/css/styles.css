@@ -165,7 +165,7 @@ a:active {
 }
 
 #feed {
-height: 100vh;
+
     overflow: scroll;	
     border-color: #FFBA49;
     border-width: 5px;
