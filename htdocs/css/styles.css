@@ -15,10 +15,10 @@
 }
 
 .bg-orange {
-	background-color: #FFBA49!important;
+	background-color: #FFBA49 !important;
 }
 
-		body {
+body {
 			font-family: 'Quando', serif;
       background-color: #D6D8D9;
       color: #23001E;
@@ -27,6 +27,34 @@
 
 .starter-template {
   text-align: center;
+}
+
+.navbar-brand {
+	font-family: 'Quando', serif !important;
+    font-size: 1.5em !important;
+    margin-left: 20vw !important;
+    margin-right: 30px !important;
+	
+}
+
+#userName {
+	font-family: 'Quando', serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#userPic {
+background-color: #D6D8D9;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-right: 5px;
 }
 
 #title {
@@ -96,7 +124,7 @@ a:active {
 	display: inline-block;
 	background-color: #20A39E;
 	 min-height: 150vh;
-	color:#ffffff;
+	color:#D6D8D9;
 	
 }
 #assignments {
@@ -190,7 +218,7 @@ display: inline-block;
 
 .btn-cp-primary {
     color: #23001E !important;
-    background-color: #ffffff !important;
+    background-color: #D6D8D9 !important;
     margin-bottom: 0.5em;
 	    margin-top: 0.5em;
 	    display: block !important;
