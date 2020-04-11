@@ -308,7 +308,7 @@ function goToCourse(courseId) {
 			var response = JSON.parse(this.responseText);
 
 
-			document.getElementById("userName").innerHTML += response.announcements[i].name.fullName;      
+			document.getElementById("userName").innerHTML += response.name.fullName;      
 
 	
 	
