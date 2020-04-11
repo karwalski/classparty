@@ -213,6 +213,7 @@ display: inline-block;
     font-size: 5em;
     overflow: hidden;
     line-height: 0.2em;
+	min-height: 150vh;
 }
 
 .btn-cp-primary {
