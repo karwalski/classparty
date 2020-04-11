@@ -63,7 +63,9 @@
     </nav>
 	
 	
-	
+<div id="sidebar">
+
+</div>	
     <main role="main" class="container">
 <div class="starter-template">
 		<video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
