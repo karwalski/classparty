@@ -77,10 +77,11 @@
 	</div>
 	<div id="feed">
 		<div class="post pinned">
-			Welcome!<br>
-			<br>
-			<br>
-			This is a placeholder page for the ACS #flattenthecurvehack challenge
+			<p><strong>Welcome!</strong></p><br>
+			<p>We have designed a virtual classroom linked to ‘Google Classroom’.  This is a more interactive and beneficial version.  It includes features that help children feel as if they were at school. The website is linked in to ‘Google Classroom’ so other children or teachers in the class can still use the old version.</p>
+<p>Augmented Reality - Using the students webcam to generate an bitmoji style character and shares with the class, so no student video is transferred to the server. (Teachers can use augmented bitmojis, or real video feed). Classmates can see other students bitmojis talking in the classroom and walk around playground and have breakout conversations (like a game).</p>
+<p>Virtual Reality - Students can wear google cardboard to see their teacher in their living room, and go on excursions with live presenters, where they can see classmates bitmojis walking along side them and ask questions to the facilitator of the excursion location (farms, museums etc)</p>
+
 		</div>
 
 		<div class="post">
