@@ -232,6 +232,34 @@ if (getCookie("access_token")) {
 			xhttp.setRequestHeader("Authorization", getCookie('token_type') + " " + getCookie('access_token'));
 			xhttp.setRequestHeader("Content-Type", "application/json");
 		  xhttp.send();
+	
+	
+		// Get Student
+	// Limiting API scope to only pull fullname, not email or dispaly picture etc.
+	// Potentially give them a random psuedonym instead of their real name that is linked to their userId
+
+	
+			// Get my name
+		  var xhttp = new XMLHttpRequest();
+			var server = "https://classroom.googleapis.com/v1/";
+			var request = "userProfiles/me";
+			var params = "";
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+			var response = JSON.parse(this.responseText);
+
+
+			document.getElementById("userName").innerHTML += response.name.fullName;      
+
+	
+	
+			    }
+		  }
+		  xhttp.open("GET", server + request + params, true);
+		
+			xhttp.setRequestHeader("Authorization", getCookie('token_type') + " " + getCookie('access_token'));
+			xhttp.setRequestHeader("Content-Type", "application/json");
+		  xhttp.send();
 					
 }
 	
@@ -293,32 +321,7 @@ function goToCourse(courseId) {
 		  xhttp.send();
 	
 	
-	// Get Student
-	// Limiting API scope to only pull fullname, not email or dispaly picture etc.
-	// Potentially give them a random psuedonym instead of their real name that is linked to their userId
 
-	
-			// Get my name
-		  var xhttp = new XMLHttpRequest();
-			var server = "https://classroom.googleapis.com/v1/";
-			var request = "userProfiles/me";
-			var params = "";
-		  xhttp.onreadystatechange = function() {
-		    if (this.readyState == 4 && this.status == 200) {
-			var response = JSON.parse(this.responseText);
-
-
-			document.getElementById("userName").innerHTML += response.name.fullName;      
-
-	
-	
-			    }
-		  }
-		  xhttp.open("GET", server + request + params, true);
-		
-			xhttp.setRequestHeader("Authorization", getCookie('token_type') + " " + getCookie('access_token'));
-			xhttp.setRequestHeader("Content-Type", "application/json");
-		  xhttp.send();
 	
 	
 }
