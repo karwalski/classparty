@@ -94,7 +94,6 @@ Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location
 	</div>
 	        </div>
     <div class="col" id="assignments">
-      Assignments
     </div>
   </div>
 </div> 
@@ -118,7 +117,7 @@ function oauthSignIn() {
   var params = {'client_id': '522572922800-m16cu28278v69hud1po3v8kt3f7atfeo.apps.googleusercontent.com',
                 'redirect_uri': 'https://classparty.net/',
                 'response_type': 'token',
-                'scope': 'https://www.googleapis.com/auth/classroom.courses.readonly https://www.googleapis.com/auth/classroom.coursework.me.readonly',
+                'scope': 'https://www.googleapis.com/auth/classroom.announcements.readonly https://www.googleapis.com/auth/classroom.courses.readonly https://www.googleapis.com/auth/classroom.coursework.me.readonly',
                 'include_granted_scopes': 'true',
                 'state': 'pass-through value'};
 
@@ -205,6 +204,7 @@ if (getCookie("access_token")) {
 function goToCourse(courseId) {
 
 	
+	// Get coursework
 		  var xhttp = new XMLHttpRequest();
 			var server = "https://classroom.googleapis.com/v1/";
 			var request = "courses/" + courseId + "/courseWork";
@@ -228,6 +228,37 @@ function goToCourse(courseId) {
 			xhttp.setRequestHeader("Authorization", getCookie('token_type') + " " + getCookie('access_token'));
 			xhttp.setRequestHeader("Content-Type", "application/json");
 		  xhttp.send();
+	
+	
+		// Get announcements
+		  var xhttp = new XMLHttpRequest();
+			var server = "https://classroom.googleapis.com/v1/";
+			var request = "courses/" + courseId + "/announcements";
+			var params = "?announcementStates=PUBLISHED";
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+			var response = JSON.parse(this.responseText);
+			    document.getElementById("feed").innerHTML = "";
+			    	// </div>
+			    for (var i = 0; i < response.announcements.length; i++)
+			    {
+				    //<button type="button" class="btn btn-primary btn-lg">Large button</button>
+				document.getElementById("feed").innerHTML += '<div class="post">' + response.announcements[i].text + '</div>';      
+			    }	
+	
+	
+			    }
+		  }
+		  xhttp.open("GET", server + request + params, true);
+		
+			xhttp.setRequestHeader("Authorization", getCookie('token_type') + " " + getCookie('access_token'));
+			xhttp.setRequestHeader("Content-Type", "application/json");
+		  xhttp.send();
+	
+	
+	
+	
+	
 }
 	
 	
