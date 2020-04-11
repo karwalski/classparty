@@ -223,6 +223,7 @@ display: inline-block;
 }
 
 .btn-cp-primary {
+	width: 100%;
     color: #23001E !important;
     background-color: #D6D8D9 !important;
     margin-bottom: 0.5em;
