@@ -131,7 +131,7 @@ Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location
 	</div>
 	        </div>
     <div class="col" id="assignments">
-	    	    <div class="arrow-green">/div><span class="arrow-text">Assignments:</span><BR />
+	    	    <div class="arrow-green"></div><span class="arrow-text">Assignments:</span><BR />
 	    Select a class from the left.
     </div>
   </div>
