@@ -1,8 +1,40 @@
+<?PHP
+
+// Placeholder for classparty main page
+
+
+?>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Classparty</title>
+  <meta name="description" content="ClassParty">
+  <meta name="author" content="karwalski">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://fonts.googleapis.com/css?family=Quando&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="icon" type="image/png" href="favicon.png">
+	
+<script src="/js/face-api/face-api.js"></script>
+  <script src="/js/face-api/faceDetectionControls.js"></script>
+  <script src="/js/face-api/commons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
 <div id="banner">
-	<div id="title" onclick="window.location.href ='/';">
-		<h1>
-			ClassParty
-		</h1>
+	<div id="title"  onclick="window.location.href ='/';">
+		<h1>ClassParty</h1>
 	</div>
 	<div id="top-menu">
 		<div class="top-menu-links" onclick="window.location.href ='ar.php?location=petra.jpg;">
@@ -19,9 +51,11 @@
 		</div>
 	</div>
 </div>
-<div id="sidebar"></div>
+<div id="sidebar">
+
+</div>
 <div id="content">
-	<video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay="" muted="" playsinline="" class="webcam"></video>
+		<video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
 	<canvas id="overlay" class="faceoverlay"></canvas>
 	<div id="feed">
 		<div class="post pinned">
@@ -30,16 +64,20 @@
 			<br>
 			This is a placeholder page for the ACS #flattenthecurvehack challenge
 		</div>
+
 		<div class="post">
 			<strong>VR Excursion examples</strong><br>
-			Chichen Itza<a href="vr.php?location=chichen-itza.jpg">VR</a> <a href="ar.php?location=chichen-itza.jpg">AR</a><br>
-			Christ Redeemer<a href="vr.php?location=christ-redeemer.jpg">VR</a> <a href="ar.php?location=christ-redeemer.jpg">AR</a><br>
-			Machu Picchu<a href="vr.php?location=machu-picchu.jpgg">VR</a> <a href="ar.php?location=machu-picchu.jpg">AR</a><br>
-			Petra<a href="vr.php?location=petra.jpg">VR</a> <a href="ar.php?location=petra.jpg">AR</a><br>
-			Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location=taj-mahal.jpg">AR</a><br>
+Chichen Itza<a href="vr.php?location=chichen-itza.jpg">VR</a> <a href="ar.php?location=chichen-itza.jpg">AR</a><br />
+Christ Redeemer<a href="vr.php?location=christ-redeemer.jpg">VR</a> <a href="ar.php?location=christ-redeemer.jpg">AR</a><br />
+Machu Picchu<a href="vr.php?location=machu-picchu.jpgg">VR</a> <a href="ar.php?location=machu-picchu.jpg">AR</a><br />
+Petra<a href="vr.php?location=petra.jpg">VR</a> <a href="ar.php?location=petra.jpg">AR</a><br />
+Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location=taj-mahal.jpg">AR</a><br />
 		</div>
 	</div>
 </div>
+	
+
+
 <script>
 	
 		
@@ -116,10 +154,10 @@ if (getCookie("access_token")) {
 
 			var response = JSON.parse(this.responseText);
 			    
-			    	// '<div class="sidebar-lessons">History<\/div>'
+			    	// '<div class="sidebar-lessons">History</div>'
 			    for (var i = 0; i < response.courses.length; i++)
 			    {
-				document.getElementById("sidebar").innerHTML += '<div class="sidebar-lessons" onClick="goToCourse(' + response.courses[i].id + ')">' + response.courses[i].name + '<\/div>'; 
+				document.getElementById("sidebar").innerHTML += '<div class="sidebar-lessons" onClick="goToCourse(' + response.courses[i].id + ')">' + response.courses[i].name + '</div>'; 
 			    }
 			    
 
@@ -148,10 +186,10 @@ function goToCourse(courseId) {
 		    if (this.readyState == 4 && this.status == 200) {
 			var response = JSON.parse(this.responseText);
 			    document.getElementById("feed").innerHTML = "";
-			    	// <\/div>
+			    	// </div>
 			    for (var i = 0; i < response.courseWork.length; i++)
 			    {
-				document.getElementById("feed").innerHTML += '<div class="post" onClick="goToCourseWork(' + response.courseWork[i].id + ')">' + response.courseWork[i].title + '<\/div>'; 
+				document.getElementById("feed").innerHTML += '<div class="post" onClick="goToCourseWork(' + response.courseWork[i].id + ')">' + response.courseWork[i].title + '</div>'; 
 			    }	
 	
 	
@@ -260,7 +298,7 @@ function streamAjax() {
 	
 	function drawTeacher(response) {
 		// Add frame back into html for echo
-		// <canvas id="teacher" width="640" height="480"><\/canvas>
+		// <canvas id="teacher" width="640" height="480"></canvas>
 			   // console.log("data:image/png;base64," + response);
 		    	var canvas = document.getElementById("teacher");
 			var ctx = canvas.getContext("2d");
@@ -270,4 +308,6 @@ function streamAjax() {
 		    ctx.drawImage(image, 0, 0);
 	}
 	
-</script>
+	</script>
+</body>
+</html>
