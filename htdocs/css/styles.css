@@ -95,7 +95,7 @@ a:active {
     text-align: left;
 	display: inline-block;
 	background-color: #20A39E;
-	 height: 100vh;
+	 min-height: 150vh;
 	color:#ffffff;
 	
 }
