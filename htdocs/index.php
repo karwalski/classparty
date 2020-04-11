@@ -63,10 +63,18 @@
     </nav>
 	
 	
-<div id="sidebar">
+
+    <main role="main" class="container">
+	   <div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="sidebar">
 
 </div>	
-    <main role="main" class="container">
+    </div>
+    <div class="col-6">
+
+	    
 <div class="starter-template">
 		<video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
 	<canvas id="overlay" class="faceoverlay"></canvas>
@@ -88,7 +96,12 @@ Petra<a href="vr.php?location=petra.jpg">VR</a> <a href="ar.php?location=petra.j
 Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location=taj-mahal.jpg">AR</a><br />
 		</div>
 	</div>
-	    
+	        </div>
+    <div class="col">
+      Assignments
+    </div>
+  </div>
+</div> 
     </main>
 	
 
