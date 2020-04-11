@@ -65,8 +65,20 @@
     <main role="main" class="container main-container">
 	   <div class="container">
   <div class="row">
-    <div class="col" id="sidebar">
-
+    <div class="col">
+<div class="container">
+  <div class="row">
+    <div class="col"  id="sidebar">
+      
+    </div>
+    <div class=".col-" id="threeDots" onclick="document.getElementById('sidebar').style.display = document.getElementById('sidebar').style.display ? 'none' : 'inline-block';">
+      	.<BR />
+	.<BR />
+	.<BR />
+	    
+    </div>
+  </div>
+</div>
     </div>
     <div class="col-6">
 
