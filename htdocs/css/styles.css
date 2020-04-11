@@ -161,5 +161,17 @@ z-index: -1000;
 .faceoverlay {
 min-width: 50%;
     width: 20vw;
+}
 
+#threeDots {
+
+display: inline-block;
+	width: 20px;
+    background-color: #20A39E;
+    height: 100vh;
+    padding-top: 30vh;
+    text-align: center;
+    font-size: 5em;
+    overflow: hidden;
+    line-height: 0.2em;
 }
