@@ -279,7 +279,7 @@ function goToCourse(courseId) {
 		  xhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
 			var response = JSON.parse(this.responseText);
-			    document.getElementById("assignments").innerHTML = "<div class="arrow-green">/div><span class="arrow-text">Assignments:</span><BR />";
+			    document.getElementById("assignments").innerHTML = '<div class="arrow-green">/div><span class="arrow-text">Assignments:</span><BR />';
 			    	// </div>
 			    for (var i = 0; i < response.courseWork.length; i++)
 			    {
