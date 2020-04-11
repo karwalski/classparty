@@ -96,6 +96,7 @@ a:active {
 	display: inline-block;
 	background-color: #20A39E;
 	 height: 100vh;
+	color:#ffffff;
 	
 }
 #assignments {
@@ -188,7 +189,8 @@ display: inline-block;
 }
 
 .btn-cp-primary {
-    color: #fff;
+    color: #23001E;
+    bg-color: #fff;
     margin-bottom: 0.5em;
 	    margin-top: 0.5em;
 }
