@@ -21,8 +21,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="icon" type="image/png" href="favicon.png">
 		
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="/js/face-api/face-api.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="/js/face-api/face-api.js"></script>
   <script src="/js/face-api/faceDetectionControls.js"></script>
   <script src="/js/face-api/commons.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -57,7 +57,7 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-outline-success my-2 my-sm-0" onclick="oauthSignIn()">SignIn</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" onclick="oauthSignIn()" id="signin">SignIn</button>
         </form>
       </div>
     </nav>
