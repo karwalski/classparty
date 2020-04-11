@@ -201,6 +201,12 @@ z-index: -1000;
 .faceoverlay {
 min-width: 50%;
     width: 20vw;
+	border-color: #FFBA49;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #threeDots {
