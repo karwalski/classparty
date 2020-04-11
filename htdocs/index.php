@@ -62,7 +62,7 @@
 	
 	
 
-    <main role="main" class="container">
+    <main role="main" class="container main-container">
 	   <div class="container">
   <div class="row">
     <div class="col" id="sidebar">
