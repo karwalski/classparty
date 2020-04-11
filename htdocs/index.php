@@ -131,8 +131,8 @@ Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location
 	</div>
 	        </div>
     <div class="col" id="assignments">
-	    	    <div class="arrow-green">
-		    </div><span class="arrow-text">Assignments:</span><BR />
+	    	    <div class="arrow-green">/div><span class="arrow-text">Assignments:</span><BR />
+	    Select a class from the left.
     </div>
   </div>
 </div> 
@@ -279,7 +279,7 @@ function goToCourse(courseId) {
 		  xhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
 			var response = JSON.parse(this.responseText);
-			    document.getElementById("assignments").innerHTML = "";
+			    document.getElementById("assignments").innerHTML = "<div class="arrow-green">/div><span class="arrow-text">Assignments:</span><BR />";
 			    	// </div>
 			    for (var i = 0; i < response.courseWork.length; i++)
 			    {
