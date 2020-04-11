@@ -117,12 +117,14 @@
 		</div>
 
 		<div class="post">
-			<strong>VR Excursion examples</strong><br>
-Chichen Itza<a href="vr.php?location=chichen-itza.jpg">VR</a> <a href="ar.php?location=chichen-itza.jpg">AR</a><br />
-Christ Redeemer<a href="vr.php?location=christ-redeemer.jpg">VR</a> <a href="ar.php?location=christ-redeemer.jpg">AR</a><br />
-Machu Picchu<a href="vr.php?location=machu-picchu.jpgg">VR</a> <a href="ar.php?location=machu-picchu.jpg">AR</a><br />
-Petra<a href="vr.php?location=petra.jpg">VR</a> <a href="ar.php?location=petra.jpg">AR</a><br />
-Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location=taj-mahal.jpg">AR</a><br />
+			<strong>Augmented and Virtual Reality Excursion Examples</strong><br><p>
+Chichen Itza, Mexico <a href="vr.php?location=chichen-itza.jpg">VR</a> <a href="ar.php?location=chichen-itza.jpg">AR</a><br />
+Christ Redeemer, Brazil <a href="vr.php?location=christ-redeemer.jpg">VR</a> <a href="ar.php?location=christ-redeemer.jpg">AR</a><br />
+Machu Picchu, Peru <a href="vr.php?location=machu-picchu.jpgg">VR</a> <a href="ar.php?location=machu-picchu.jpg">AR</a><br />
+Petra, Jordan <a href="vr.php?location=petra.jpg">VR</a> <a href="ar.php?location=petra.jpg">AR</a><br />
+Taj Mahal, India <a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location=taj-mahal.jpg">AR</a></p>
+			<p>The AR examples will work better on a computer, and either depending on your portable device.</p>
+			<p>The facial landmarks will be used to generate emoji style 3D characters that can interact with teachers, tour guides and other students during live excursion sessions.</p>
 		</div>
 	</div>
 	        </div>
@@ -134,7 +136,11 @@ Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location
 </div> 
     </main>
 	
-
+<footer class="footer mt-auto py-3">
+  <div class="container">
+	  <span class="text-muted">The <a href="https://github.com/karwalski/classparty/" target="_blank">Hacklings</a> entry in 2020 <a href="https://membership.acs.org.au/flattenthecurvehack.html" target="_blank">ACS #flattenthecurvehack</a>.</span>
+  </div>
+</footer>
 
 <script>
 	
