@@ -11,6 +11,7 @@
 
 .main-container {
     margin-top: -25px;
+	min-height: 100vh;
 }
 
 .bg-orange {
