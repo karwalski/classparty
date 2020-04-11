@@ -73,16 +73,16 @@
 		    <div id="userPic"></div>
 		    <div id="userName"></div>
 	    </div>
-	    <div id="arrow-yellow">
+	    <div class="arrow-yellow">
 		    </div>Classes:<BR />
 	    <div id="sidebar-classes">
 		    </div>
 	    
-	    <div id="arrow-yellow">
+	    <div class="arrow-yellow">
 		    </div>Brain Break:<BR />
 	    <button type="button" class="btn btn-cp-primary btn-lg" onclick='window.location.href ="ar.php?location=chichen-itza.jpg";'>Brain Break</button>
 	    
-	    <div id="arrow-yellow">
+	    <div class="arrow-yellow">
 		    </div>Games:<BR />
 	    <button type="button" class="btn btn-cp-primary btn-lg">Game 1</button>
 	    <button type="button" class="btn btn-cp-primary btn-lg">Game 2</button>
