@@ -189,8 +189,8 @@ display: inline-block;
 }
 
 .btn-cp-primary {
-    color: #23001E;
-    bg-color: #fff;
+    color: #23001E !important;
+    background-color: #ffffff !important;
     margin-bottom: 0.5em;
 	    margin-top: 0.5em;
 }
@@ -201,5 +201,5 @@ display: inline-block;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   
-  border-left: 20px solid green;
+  border-left: 20px solid #FFBA49;
 }
