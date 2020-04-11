@@ -32,31 +32,43 @@
 </head>
 
 <body>
-<div id="banner">
-	<div id="title"  onclick="window.location.href ='/';">
-		<h1>ClassParty</h1>
-	</div>
-	<div id="top-menu">
-		<div class="top-menu-links" onclick="window.location.href ='ar.php?location=petra.jpg;">
-			Brain Break
-		</div>
-		<div class="top-menu-links" onclick="window.location.href ='ar.php?location=chichen-itza.jpg';">
-			Excursions
-		</div>
-		<div class="top-menu-links" onclick="window.location.href ='https://classroom.google.com/';">
-			Google Classrom
-		</div>
-		<div class="top-menu-links" id="signin" onclick="oauthSignIn()">
-			Sign In
-		</div>
-	</div>
-</div>
-<div id="sidebar">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">ClassParty</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-</div>
-<div id="content">
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="ar.php?location=chichen-itza.jpg">Excursions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Brain Break</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Classes</a>
+              <a class="dropdown-item" href="#">Class work</a>
+              <a class="dropdown-item" href="#">Classmates</a>
+              <a class="dropdown-item" href="https://classroom.google.com/">Clasic Google Classrooms</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-success my-2 my-sm-0" onclick="oauthSignIn()">SignIn</button>
+        </form>
+      </div>
+    </nav>
+	
+	
+	
+    <main role="main" class="container">
+<div class="starter-template">
 		<video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline class="webcam"></video>
 	<canvas id="overlay" class="faceoverlay"></canvas>
+	</div>
 	<div id="feed">
 		<div class="post pinned">
 			Welcome!<br>
@@ -74,7 +86,8 @@ Petra<a href="vr.php?location=petra.jpg">VR</a> <a href="ar.php?location=petra.j
 Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location=taj-mahal.jpg">AR</a><br />
 		</div>
 	</div>
-</div>
+	    
+    </main>
 	
 
 
