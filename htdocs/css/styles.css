@@ -207,6 +207,17 @@ display: inline-block;
 	    vertical-align: middle;
 	margin-top: 10px;
 }
+.arrow-green {
+	  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  
+  border-left: 20px solid #20A39E;
+	    display: inline-block;
+	    vertical-align: middle;
+	margin-top: 10px;
+}
 .arrow-text {
 	    display: inline-block;
 	    vertical-align: middle;
