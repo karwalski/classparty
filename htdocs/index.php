@@ -83,6 +83,11 @@
 <p>Virtual Reality - Students can wear google cardboard to see their teacher in their living room, and go on excursions with live presenters, where they can see classmates bitmojis walking along side them and ask questions to the facilitator of the excursion location (farms, museums etc)</p>
 
 		</div>
+				<div class="post">
+			<p><strong>Safe WebCam use with school children</strong></p><br>
+			<p>This website asks you to enable your webcam, however unlikely other video conference software the webcam is processed on the students computer and only sends the facial landmarks to the ClassParty server. These facial landmarks can be used with third party emoji/bitmoji characters to communicate with their teacher and classmates during virtual classrooms and in the AR and VR experiences.</p>
+			<p>Child safety and security issues associated with mainstream video conference software has been in the news alot in the last few weeks, and our solution offers an alternate to transmitting videos of childrens faces.</p>
+		</div>
 
 		<div class="post">
 			<strong>VR Excursion examples</strong><br>
