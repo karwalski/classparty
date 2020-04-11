@@ -88,8 +88,13 @@ a:active {
 
 #sidebar {
     text-align: center;
-	 width: 10vw;
 	display: inline-block;
+	background-color: #20A39E;
+	
+}
+#assignments {
+    text-align: center;
+	background-color: #20A39E;
 	
 }
 
