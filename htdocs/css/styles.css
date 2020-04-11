@@ -13,7 +13,13 @@
 			font-family: 'Quando', serif;
       background-color: #D6D8D9;
       color: #23001E;
+			padding-top: 5rem;
 		}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
 
 #title {
  /* background-color: #D6D8D9; */ 
