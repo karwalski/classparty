@@ -65,10 +65,8 @@
     <main role="main" class="container">
 	   <div class="container">
   <div class="row">
-    <div class="col">
-      <div id="sidebar">
+    <div class="col" id="sidebar">
 
-</div>	
     </div>
     <div class="col-6">
 
@@ -95,7 +93,7 @@ Taj Mahal<a href="vr.php?location=taj-mahal.jpg">VR</a> <a href="ar.php?location
 		</div>
 	</div>
 	        </div>
-    <div class="col">
+    <div class="col" id="assignments">
       Assignments
     </div>
   </div>
@@ -180,12 +178,15 @@ if (getCookie("access_token")) {
 
 			var response = JSON.parse(this.responseText);
 			    
+			    document.getElementById("sidebar").innerHTML = "";
 			    	// '<div class="sidebar-lessons">History</div>'
 			    for (var i = 0; i < response.courses.length; i++)
 			    {
-				document.getElementById("sidebar").innerHTML += '<div class="sidebar-lessons" onClick="goToCourse(' + response.courses[i].id + ')">' + response.courses[i].name + '</div>'; 
-			    }
-			    
+				    //<button type="button" class="btn btn-primary btn-lg"
+				document.getElementById("sidebar").innerHTML += '<button type="button" class="btn btn-primary btn-lg" onClick="goToCourse(' + response.courses[i].id + ')">' + response.courses[i].name + '</button>';        
+ 			    }
+	  		    document.getElementById("sidebar").innerHTML += '<button type="button" class="btn btn-primary btn-lg" onclick="window.location.href =\'ar.php?location=chichen-itza.jpg\';">Brain Break</button>';        
+
 
 				
 		    }
@@ -211,11 +212,12 @@ function goToCourse(courseId) {
 		  xhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
 			var response = JSON.parse(this.responseText);
-			    document.getElementById("feed").innerHTML = "";
+			    document.getElementById("assignments").innerHTML = "";
 			    	// </div>
 			    for (var i = 0; i < response.courseWork.length; i++)
 			    {
-				document.getElementById("feed").innerHTML += '<div class="post" onClick="goToCourseWork(' + response.courseWork[i].id + ')">' + response.courseWork[i].title + '</div>'; 
+				    //<button type="button" class="btn btn-primary btn-lg">Large button</button>
+				document.getElementById("assignments").innerHTML += '<button type="button" class="btn btn-primary btn-lg" onClick="goToCourseWork(' + response.courseWork[i].id + ')">' + response.courseWork[i].title + '</button>';      
 			    }	
 	
 	
