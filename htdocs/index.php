@@ -81,12 +81,7 @@
 	    <div class="arrow-yellow">
 		    </div><span class="arrow-text">Brain Break:</span><BR />
 	    <button type="button" class="btn btn-cp-primary btn-lg" onclick='window.location.href ="ar.php?location=chichen-itza.jpg";'>Brain Break</button>
-	    
-	    <div class="arrow-yellow">
-		    </div><span class="arrow-text">Games:</span><BR />
-	    <button type="button" class="btn btn-cp-primary btn-lg">Game 1</button>
-	    <button type="button" class="btn btn-cp-primary btn-lg">Game 2</button>
-	    <button type="button" class="btn btn-cp-primary btn-lg">Game 3</button>
+
 	    
     </div>
     <div class=".col-" id="threeDots" onclick="document.getElementById('sidebar').style.display = document.getElementById('sidebar').style.display == 'none' ? 'inline-block' : 'none';">
