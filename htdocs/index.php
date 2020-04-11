@@ -49,10 +49,10 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Classes</a>
-              <a class="dropdown-item" href="#">Class work</a>
+              <a class="dropdown-item" href="#" onclick="document.getElementById('sidebar').style.display = 'inline-block';">Classes</a>
+              <a class="dropdown-item" href="#" onclick="document.getElementById('sidebar').style.display = 'inline-block';">Class work</a>
               <a class="dropdown-item" href="#">Classmates</a>
-              <a class="dropdown-item" href="https://classroom.google.com/">Clasic Google Classrooms</a>
+              <a class="dropdown-item" href="https://classroom.google.com/" target="_blank">Clasic Google Classrooms</a>
             </div>
           </li>
         </ul>
