@@ -252,8 +252,8 @@ if (getCookie("access_token")) {
 		    if (this.readyState == 4 && this.status == 200) {
 			var response = JSON.parse(this.responseText);
 
-
-			document.getElementById("userName").innerHTML += response.name.fullName;      
+			document.getElementById("userPic").style.display = 'inline-block';
+			document.getElementById("userName").innerHTML = response.name.fullName;      
 
 	
 	
