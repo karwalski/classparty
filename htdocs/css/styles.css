@@ -21,7 +21,6 @@
 		}
 
 .starter-template {
-  padding: 3rem 1.5rem;
   text-align: center;
 }
 
@@ -143,7 +142,7 @@ z-index: -1000;
 }
 
 .faceoverlay {
-	
-	/* position: absolute; */
-	width: 30vw;
+min-width: 50%;
+    width: 20vw;
+
 }
